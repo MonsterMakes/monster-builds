@@ -1,0 +1,1580 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1, viewport-fit=cover">
+<title>Shop guide – Upper stairs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=Archivo+Narrow:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#e9ede8;--sheet:#f6f8f4;--ink:#1f262c;--ink2:#56616b;--line:#9aa6ae;--steel:#b8c4cc;--steeld:#7f8f9a;--wood:#dcc193;--woodl:#b08a52;--conc:#d3d0c7;--concd:#8f8a7e;--pad:#2f3438;--mark:#1d4f91;--hold:#b3261e;--sph:#1d4f91}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#171c20;--sheet:#1f252a;--ink:#dfe5e8;--ink2:#9aa7b0;--line:#55616a;--steel:#4a5862;--steeld:#8a9aa5;--wood:#6e5836;--woodl:#9c7c4c;--conc:#393832;--concd:#6f6a5f;--pad:#0c0e10;--mark:#7fb0ef;--hold:#f28b82;--sph:#7fb0ef}}
+:root[data-theme="dark"]{--paper:#171c20;--sheet:#1f252a;--ink:#dfe5e8;--ink2:#9aa7b0;--line:#55616a;--steel:#4a5862;--steeld:#8a9aa5;--wood:#6e5836;--woodl:#9c7c4c;--conc:#393832;--concd:#6f6a5f;--pad:#0c0e10;--mark:#7fb0ef;--hold:#f28b82;--sph:#7fb0ef}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Archivo",system-ui,sans-serif;font-size:16px;line-height:1.5}
+.cover{max-width:1180px;margin:0 auto;padding:40px 24px 8px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;border-bottom:2px solid var(--ink)}
+.cover h1{font-family:"Archivo Narrow","Arial Narrow",sans-serif;font-weight:700;font-size:clamp(34px,5vw,58px);line-height:1;margin:0;letter-spacing:-.01em}
+.cover p{margin:10px 0 0;color:var(--ink2);max-width:62ch}
+.stamp{border:2px solid var(--hold);color:var(--hold);padding:8px 14px;font-family:"Archivo Narrow",sans-serif;font-weight:700;font-size:15px;line-height:1.25;transform:rotate(-2deg);text-align:center}
+nav{max-width:1180px;margin:0 auto;padding:12px 24px;display:flex;flex-wrap:wrap;gap:6px 18px;font-family:"Archivo Narrow",sans-serif;font-size:15px}
+nav a{color:var(--ink);text-decoration:none;padding:2px 0;border-bottom:1px solid transparent}
+nav a:hover,nav a:focus-visible{border-bottom-color:var(--ink);outline:none}
+nav b{margin-right:6px;color:var(--mark)}
+main{max-width:1180px;margin:0 auto;padding:12px 24px 60px;display:grid;gap:28px}
+.sheet{background:var(--sheet);border:1.5px solid var(--ink);scroll-margin-top:12px}
+.tb{display:grid;grid-template-columns:auto 1fr;border-bottom:1.5px solid var(--ink)}
+.tb .num{font-family:"Archivo Narrow",sans-serif;font-weight:700;font-size:26px;padding:10px 18px;border-right:1.5px solid var(--ink);display:flex;align-items:center}
+.tb .ttl{padding:8px 16px}
+.tb h2{margin:0;font-family:"Archivo Narrow",sans-serif;font-size:22px;font-weight:600}
+.tb p{margin:0;color:var(--ink2);font-size:13px}
+.body{padding:18px}
+figure{margin:0 0 18px}
+figcaption{font-size:14px;color:var(--ink2);margin-top:6px;max-width:80ch}
+.scroll{overflow-x:auto}
+.scroll svg{display:block;max-width:100%;height:auto}
+.big .scroll svg{min-width:680px}
+.row{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start}
+.row{justify-content:space-between}
+.row figure{flex:0 1 auto;min-width:0}
+h3{font-family:"Archivo Narrow",sans-serif;font-size:19px;font-weight:600;margin:18px 0 8px}
+h3:first-child{margin-top:0}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+.kv td{padding:5px 8px 5px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.kv td:first-child{font-weight:600;white-space:nowrap;padding-right:14px}
+.grid th,.grid td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.grid th{font-family:"Archivo Narrow",sans-serif;font-weight:600;background:color-mix(in srgb,var(--steel) 35%,transparent)}
+.grid td:first-child{font-weight:700;color:var(--mark);white-space:nowrap}
+.grid tfoot td{font-weight:600;color:var(--ink)}
+.holds li{margin-bottom:8px;max-width:70ch}
+.holds li::marker{color:var(--hold);font-weight:700}
+.seq li{margin-bottom:6px;max-width:80ch}
+.legend{display:flex;flex-wrap:wrap;gap:10px 24px;font-size:14px}
+.legend span{display:flex;align-items:center;gap:8px}
+.legend svg{width:40px;height:22px}
+p{max-width:75ch}
+/* drawing classes */
+svg text{font-family:"Archivo Narrow","Arial Narrow",sans-serif}
+.ob{stroke:var(--ink);stroke-width:1.3;stroke-linejoin:round}
+.steel{fill:var(--steel)}
+.void{fill:var(--sheet)}
+.paper{fill:var(--sheet)}
+.none{fill:none}
+.pad{fill:var(--pad)}
+.nut{fill:var(--steeld);stroke:var(--ink);stroke-width:.8}
+.weld{fill:var(--ink)}
+.ccb{fill:var(--conc)}.ccd{fill:var(--concd)}
+.wdb{fill:var(--wood)}.wdl{stroke:var(--woodl);stroke-width:.8;fill:none}
+.stb{fill:var(--steel)}.stl{stroke:var(--steeld);stroke-width:1}
+.grl{stroke:var(--line);stroke-width:1}
+.wdplan{fill:color-mix(in srgb,var(--wood) 55%,transparent)}
+.grade{stroke:var(--ink);stroke-width:2}
+.grout{fill:var(--conc);stroke:var(--ink);stroke-width:.8;stroke-dasharray:3 2}
+.hid{fill:none;stroke:var(--ink2);stroke-width:1;stroke-dasharray:6 4}
+.hidthin{stroke:var(--ink2);stroke-width:.8;stroke-dasharray:4 3}
+.hidc{fill:none;stroke:var(--ink2);stroke-width:1;stroke-dasharray:3 2}
+.rod{stroke:var(--ink2);stroke-width:2.2;stroke-dasharray:5 3}
+.rodc{fill:var(--sheet);stroke:var(--ink);stroke-width:.8}
+.lag{stroke:var(--ink);stroke-width:1.6;stroke-dasharray:3 2}
+.cl{stroke:var(--ink2);stroke-width:.8;stroke-dasharray:14 3 2 3;fill:none}
+.thin{stroke:var(--ink2);stroke-width:.8}
+.brk{stroke:var(--ink);stroke-width:1.2;stroke-dasharray:8 3}
+.ext{stroke:var(--ink2);stroke-width:.7}
+.dl{stroke:var(--ink2);stroke-width:.8}
+.tick{stroke:var(--ink);stroke-width:1.4}
+.dt{font-size:12px;fill:var(--ink);paint-order:stroke;stroke:var(--sheet);stroke-width:3.5px;stroke-linejoin:round}
+.sm{font-size:11.5px;fill:var(--ink2);paint-order:stroke;stroke:var(--sheet);stroke-width:3px}
+.nt{font-size:12px;fill:var(--ink2)}
+.tn{font-size:15px;font-weight:700;fill:var(--ink2)}
+.dot{fill:var(--mark)}
+.ldr{stroke:var(--mark);stroke-width:1}
+.bub{fill:var(--sheet);stroke:var(--mark);stroke-width:1.4}
+.bt{font-size:11px;font-weight:700;fill:var(--mark)}
+.lt{font-size:12.5px;fill:var(--ink);paint-order:stroke;stroke:var(--sheet);stroke-width:3.5px;stroke-linejoin:round}
+.arw{stroke:var(--mark);stroke-width:1.6}.arwh{fill:var(--mark)}
+.sphere{fill:color-mix(in srgb,var(--sph) 18%,transparent);stroke:var(--sph);stroke-width:1.6}
+.sph_t{font-size:12.5px;font-weight:600;fill:var(--sph);paint-order:stroke;stroke:var(--sheet);stroke-width:3.5px}
+@media (max-width:640px){.cover{grid-template-columns:1fr}.stamp{justify-self:start}.body{padding:12px}}
+@media print{nav{display:none}.sheet{break-inside:avoid;page-break-after:always}}
+.hidp{stroke:var(--mark);stroke-width:1.2;stroke-dasharray:5 3;fill:none}
+
+
+
+.hidp{stroke:var(--mark);stroke-width:1.2;stroke-dasharray:5 3;fill:none}
+.coral{fill:var(--steeld)}
+.redc{fill:none;stroke:var(--hold);stroke-width:1.6}
+ol.steps{list-style:none;counter-reset:s;padding:0;margin:8px 0}
+ol.steps li{counter-increment:s;display:flex;gap:10px;align-items:flex-start;padding:5px 0;border-bottom:1px solid var(--line)}
+ol.steps li::before{content:counter(s);font:600 13px 'Archivo Narrow',sans-serif;color:var(--mute);min-width:18px}
+.box{flex:none;width:14px;height:14px;border:1.5px solid var(--ink2);border-radius:2px;margin-top:2px}
+.blank{display:inline-block;min-width:90px;border-bottom:1px solid var(--ink2);height:1em}
+.hold{font:700 11px 'Archivo Narrow',sans-serif;color:var(--hold);border:1px solid var(--hold);border-radius:3px;padding:0 4px}
+.note{color:var(--mute);font-size:14px}
+.qty{font-size:15px;margin:4px 0 8px}
+.holdf{fill:var(--hold);opacity:.4}
+@media print{html,body,main{background:#fff !important;padding:0 !important;margin:0 !important}nav,header.cover{display:none}article.sheet{break-before:page;margin:0;border:none;box-shadow:none;max-width:none !important;width:100% !important}figure,table,ol.steps li{break-inside:avoid}h3{break-after:avoid}}
+</style></head><body>
+<header class="cover"><div><h1>Shop guide: Upper stairs</h1>
+<p>Parts, materials, hardware and fabrication detail, one page per part. Numbers come from the same model as the drawing set, rev Q, 23 September 2026. Section 1 of 9. Page numbers carry the section prefix U.</p></div>
+<div class="stamp">Build to the<br>drawing set rev Q</div></header>
+<nav aria-label="Sheets"><a href="#sU-00"><b>U-00</b>Upper stairs, index</a><a href="#sU-M4"><b>U-M4</b>M4 Base plate</a><a href="#sU-M6"><b>U-M6</b>M6 Wall plate</a><a href="#sU-M1"><b>U-M1</b>M1 Mono stringer</a><a href="#sU-M2a"><b>U-M2a</b>M2a Stubs</a><a href="#sU-M2b"><b>U-M2b</b>M2b Stub, tread 1</a><a href="#sU-M7"><b>U-M7</b>M7 Tread frame assembly</a><a href="#sU-F1"><b>U-F1</b>F1 Front and back members</a><a href="#sU-F2"><b>U-F2</b>F2 End members</a><a href="#sU-F3"><b>U-F3</b>F3 Joists</a><a href="#sU-M8"><b>U-M8</b>M8 Collars and M3 plate</a><a href="#sU-P1"><b>U-P1</b>P1 Guard stems</a><a href="#sU-W1"><b>U-W1</b>W1 Ash planks</a></nav>
+<main><article class="sheet" id="sU-00"><header class="tb"><div class="num">U-00</div><div class="ttl"><h2>Upper stairs, index</h2><p>Upper stairs</p></div></header><div class="body"><div class="scroll"><table class="grid"><thead><tr><th>Mark</th><th>Qty</th><th>Part</th><th>Page</th></tr></thead><tbody><tr><td>M4</td><td>1</td><td>Base plate</td><td><a href="#sU-M4">U-M4</a></td></tr><tr><td>M6</td><td>1</td><td>Wall plate</td><td><a href="#sU-M6">U-M6</a></td></tr><tr><td>M1</td><td>1</td><td>Mono stringer</td><td><a href="#sU-M1">U-M1</a></td></tr><tr><td>M2a</td><td>6</td><td>Stubs, treads 2 to landing</td><td><a href="#sU-M2a">U-M2a</a></td></tr><tr><td>M2b</td><td>1</td><td>Stub, tread 1</td><td><a href="#sU-M2b">U-M2b</a></td></tr><tr><td>M7</td><td>7</td><td>Tread frame assembly</td><td><a href="#sU-M7">U-M7</a></td></tr><tr><td>F1</td><td>14</td><td>Tread frame front and back members</td><td><a href="#sU-F1">U-F1</a></td></tr><tr><td>F2</td><td>14</td><td>Tread frame end members</td><td><a href="#sU-F2">U-F2</a></td></tr><tr><td>F3</td><td>14</td><td>Tread frame joists</td><td><a href="#sU-F3">U-F3</a></td></tr><tr><td>M8</td><td>14 + 7</td><td>Collars and M3 plate</td><td><a href="#sU-M8">U-M8</a></td></tr><tr><td>P1</td><td>6</td><td>Guard stems</td><td><a href="#sU-P1">U-P1</a></td></tr><tr><td>W1</td><td>14</td><td>Ash planks</td><td><a href="#sU-W1">U-W1</a></td></tr></tbody></table></div><figure class="big"><div class="scroll"><svg viewBox="0 0 1096 696" width="1096" height="696" role="img" aria-label="Side elevation" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="secc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="sewd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="sest" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="segr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><line x1="0.0" y1="576.0" x2="766.0" y2="576.0" class="grade"/>
+<rect x="0.0" y="576.0" width="766.0" height="17.6" rx="0" fill="url(#segr)" class=" none"/>
+<rect x="168.0" y="576.2" width="208.0" height="103.8" rx="0" class="hid"/>
+<text x="272.0" y="668.8" text-anchor="middle" class="sm">existing pier below pavers</text>
+<rect x="766.0" y="191.0" width="96.0" height="497.0" rx="0" fill="url(#secc)" class=" ob"/>
+<line x1="862.0" y1="191.0" x2="894.0" y2="191.0" class="grade"/>
+<rect x="124.0" y="572.0" width="240.0" height="4.0" rx="0" class="steel ob"/>
+<line x1="142.0" y1="624.0" x2="142.0" y2="564.0" class="rod"/>
+<rect x="134.0" y="570.0" width="16.0" height="2.0" rx="0" class="steel ob"/>
+<rect x="137.6" y="565.2" width="8.8" height="4.8" rx="0" class="nut"/>
+<line x1="178.0" y1="624.0" x2="178.0" y2="564.0" class="rod"/>
+<rect x="170.0" y="570.0" width="16.0" height="2.0" rx="0" class="steel ob"/>
+<rect x="173.6" y="565.2" width="8.8" height="4.8" rx="0" class="nut"/>
+<polygon points="204.7,572.0 762.0,231.4 762.0,306.4 327.5,572.0" class="steel ob"/>
+<rect x="136.0" y="535.0" width="90.0" height="12.0" rx="0" class="steel ob"/>
+<rect x="136.0" y="521.0" width="44.0" height="14.0" rx="0" fill="url(#sewd)" class=" ob"/>
+<rect x="181.5" y="521.0" width="44.5" height="14.0" rx="0" fill="url(#sewd)" class=" ob"/>
+<rect x="156.0" y="535.0" width="50.0" height="3.0" rx="0" class="hid"/>
+<rect x="156.0" y="538.0" width="50.0" height="9.0" rx="0" class="hid"/>
+<rect x="157.0" y="547.0" width="48.0" height="25.0" rx="0" class="steel ob"/>
+<rect x="157.0" y="538.5" width="48.0" height="8.5" rx="0" class="hid"/>
+<rect x="226.0" y="480.0" width="90.0" height="12.0" rx="0" class="steel ob"/>
+<rect x="226.0" y="466.0" width="44.0" height="14.0" rx="0" fill="url(#sewd)" class=" ob"/>
+<rect x="271.5" y="466.0" width="44.5" height="14.0" rx="0" fill="url(#sewd)" class=" ob"/>
+<rect x="246.0" y="480.0" width="50.0" height="3.0" rx="0" class="hid"/>
+<rect x="246.0" y="483.0" width="50.0" height="9.0" rx="0" class="hid"/>
+<polygon points="247.0,492.0 295.0,492.0 295.0,516.8 247.0,546.2" class="steel ob"/>
+<rect x="247.0" y="483.5" width="48.0" height="8.5" rx="0" class="hid"/>
+<rect x="316.0" y="425.0" width="90.0" height="12.0" rx="0" class="steel ob"/>
+<rect x="316.0" y="411.0" width="44.0" height="14.0" rx="0" fill="url(#sewd)" class=" ob"/>
+<rect x="361.5" y="411.0" width="44.5" height="14.0" rx="0" fill="url(#sewd)" class=" ob"/>
+<rect x="336.0" y="425.0" width="50.0" height="3.0" rx="0" class="hid"/>
+<rect x="336.0" y="428.0" width="50.0" height="9.0" rx="0" class="hid"/>
+<polygon points="337.0,437.0 385.0,437.0 385.0,461.8 337.0,491.2" class="steel ob"/>
+<rect x="337.0" y="428.5" width="48.0" height="8.5" rx="0" class="hid"/>
+<rect x="406.0" y="370.0" width="90.0" height="12.0" rx="0" class="steel ob"/>
+<rect x="406.0" y="356.0" width="44.0" height="14.0" rx="0" fill="url(#sewd)" class=" ob"/>
+<rect x="451.5" y="356.0" width="44.5" height="14.0" rx="0" fill="url(#sewd)" class=" ob"/>
+<rect x="426.0" y="370.0" width="50.0" height="3.0" rx="0" class="hid"/>
+<rect x="426.0" y="373.0" width="50.0" height="9.0" rx="0" class="hid"/>
+<polygon points="427.0,382.0 475.0,382.0 475.0,406.8 427.0,436.2" class="steel ob"/>
+<rect x="427.0" y="373.5" width="48.0" height="8.5" rx="0" class="hid"/>
+<rect x="496.0" y="315.0" width="90.0" height="12.0" rx="0" class="steel ob"/>
+<rect x="496.0" y="301.0" width="44.0" height="14.0" rx="0" fill="url(#sewd)" class=" ob"/>
+<rect x="541.5" y="301.0" width="44.5" height="14.0" rx="0" fill="url(#sewd)" class=" ob"/>
+<rect x="516.0" y="315.0" width="50.0" height="3.0" rx="0" class="hid"/>
+<rect x="516.0" y="318.0" width="50.0" height="9.0" rx="0" class="hid"/>
+<polygon points="517.0,327.0 565.0,327.0 565.0,351.8 517.0,381.2" class="steel ob"/>
+<rect x="517.0" y="318.5" width="48.0" height="8.5" rx="0" class="hid"/>
+<rect x="586.0" y="260.0" width="90.0" height="12.0" rx="0" class="steel ob"/>
+<rect x="586.0" y="246.0" width="44.0" height="14.0" rx="0" fill="url(#sewd)" class=" ob"/>
+<rect x="631.5" y="246.0" width="44.5" height="14.0" rx="0" fill="url(#sewd)" class=" ob"/>
+<rect x="606.0" y="260.0" width="50.0" height="3.0" rx="0" class="hid"/>
+<rect x="606.0" y="263.0" width="50.0" height="9.0" rx="0" class="hid"/>
+<polygon points="607.0,272.0 655.0,272.0 655.0,296.8 607.0,326.2" class="steel ob"/>
+<rect x="607.0" y="263.5" width="48.0" height="8.5" rx="0" class="hid"/>
+<rect x="676.0" y="205.0" width="90.0" height="12.0" rx="0" class="steel ob"/>
+<rect x="676.0" y="191.0" width="44.0" height="14.0" rx="0" fill="url(#sewd)" class=" ob"/>
+<rect x="721.5" y="191.0" width="44.5" height="14.0" rx="0" fill="url(#sewd)" class=" ob"/>
+<rect x="696.0" y="205.0" width="50.0" height="3.0" rx="0" class="hid"/>
+<rect x="696.0" y="208.0" width="50.0" height="9.0" rx="0" class="hid"/>
+<polygon points="697.0,217.0 745.0,217.0 745.0,241.8 697.0,271.2" class="steel ob"/>
+<rect x="697.0" y="208.5" width="48.0" height="8.5" rx="0" class="hid"/>
+<rect x="762.0" y="220.9" width="4.0" height="128.0" rx="0" class="steel ob"/>
+<line x1="758.8" y1="252.9" x2="810.0" y2="252.9" class="rod"/>
+<line x1="758.8" y1="292.9" x2="810.0" y2="292.9" class="rod"/>
+<line x1="758.8" y1="332.9" x2="810.0" y2="332.9" class="rod"/>
+<rect x="169.0" y="345.0" width="24.0" height="190.0" rx="0" class="hid"/>
+<rect x="439.0" y="180.0" width="24.0" height="190.0" rx="0" class="hid"/>
+<rect x="676.0" y="15.0" width="24.0" height="190.0" rx="0" class="hid"/>
+<line x1="112.0" y1="535.7" x2="790.0" y2="121.3" class="cl"/>
+<text x="344.0" y="387.9" text-anchor="middle" class="sm" transform="rotate(-31.43 344.0 387.9)">nosing line</text>
+<line x1="101.0" y1="521.0" x2="79.0" y2="521.0" class="ext"/>
+<line x1="101.0" y1="576.0" x2="79.0" y2="576.0" class="ext"/>
+<line x1="84.0" y1="521.0" x2="84.0" y2="576.0" class="dl"/>
+<line x1="80.8" y1="517.8" x2="87.2" y2="524.2" class="tick"/>
+<line x1="80.8" y1="572.8" x2="87.2" y2="579.2" class="tick"/>
+<text x="77.0" y="548.5" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(90.00 77.0 548.5)">6-7/8"</text>
+<line x1="101.0" y1="466.0" x2="79.0" y2="466.0" class="ext"/>
+<line x1="101.0" y1="521.0" x2="79.0" y2="521.0" class="ext"/>
+<line x1="84.0" y1="466.0" x2="84.0" y2="521.0" class="dl"/>
+<line x1="80.8" y1="462.8" x2="87.2" y2="469.2" class="tick"/>
+<line x1="80.8" y1="517.8" x2="87.2" y2="524.2" class="tick"/>
+<text x="77.0" y="493.5" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(90.00 77.0 493.5)">6-7/8"</text>
+<line x1="101.0" y1="411.0" x2="79.0" y2="411.0" class="ext"/>
+<line x1="101.0" y1="466.0" x2="79.0" y2="466.0" class="ext"/>
+<line x1="84.0" y1="411.0" x2="84.0" y2="466.0" class="dl"/>
+<line x1="80.8" y1="407.8" x2="87.2" y2="414.2" class="tick"/>
+<line x1="80.8" y1="462.8" x2="87.2" y2="469.2" class="tick"/>
+<text x="77.0" y="438.5" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(90.00 77.0 438.5)">6-7/8"</text>
+<line x1="101.0" y1="356.0" x2="79.0" y2="356.0" class="ext"/>
+<line x1="101.0" y1="411.0" x2="79.0" y2="411.0" class="ext"/>
+<line x1="84.0" y1="356.0" x2="84.0" y2="411.0" class="dl"/>
+<line x1="80.8" y1="352.8" x2="87.2" y2="359.2" class="tick"/>
+<line x1="80.8" y1="407.8" x2="87.2" y2="414.2" class="tick"/>
+<text x="77.0" y="383.5" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(90.00 77.0 383.5)">6-7/8"</text>
+<line x1="101.0" y1="301.0" x2="79.0" y2="301.0" class="ext"/>
+<line x1="101.0" y1="356.0" x2="79.0" y2="356.0" class="ext"/>
+<line x1="84.0" y1="301.0" x2="84.0" y2="356.0" class="dl"/>
+<line x1="80.8" y1="297.8" x2="87.2" y2="304.2" class="tick"/>
+<line x1="80.8" y1="352.8" x2="87.2" y2="359.2" class="tick"/>
+<text x="77.0" y="328.5" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(90.00 77.0 328.5)">6-7/8"</text>
+<line x1="101.0" y1="246.0" x2="79.0" y2="246.0" class="ext"/>
+<line x1="101.0" y1="301.0" x2="79.0" y2="301.0" class="ext"/>
+<line x1="84.0" y1="246.0" x2="84.0" y2="301.0" class="dl"/>
+<line x1="80.8" y1="242.8" x2="87.2" y2="249.2" class="tick"/>
+<line x1="80.8" y1="297.8" x2="87.2" y2="304.2" class="tick"/>
+<text x="77.0" y="273.5" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(90.00 77.0 273.5)">6-7/8"</text>
+<line x1="101.0" y1="191.0" x2="79.0" y2="191.0" class="ext"/>
+<line x1="101.0" y1="246.0" x2="79.0" y2="246.0" class="ext"/>
+<line x1="84.0" y1="191.0" x2="84.0" y2="246.0" class="dl"/>
+<line x1="80.8" y1="187.8" x2="87.2" y2="194.2" class="tick"/>
+<line x1="80.8" y1="242.8" x2="87.2" y2="249.2" class="tick"/>
+<text x="77.0" y="218.5" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(90.00 77.0 218.5)">6-7/8"</text>
+<line x1="101.0" y1="191.0" x2="19.0" y2="191.0" class="ext"/>
+<line x1="101.0" y1="576.0" x2="19.0" y2="576.0" class="ext"/>
+<line x1="24.0" y1="191.0" x2="24.0" y2="576.0" class="dl"/>
+<line x1="20.8" y1="187.8" x2="27.2" y2="194.2" class="tick"/>
+<line x1="20.8" y1="572.8" x2="27.2" y2="579.2" class="tick"/>
+<text x="17.0" y="383.5" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(90.00 17.0 383.5)">48-1/8" total rise</text>
+<line x1="136.0" y1="518.0" x2="136.0" y2="115.0" class="ext"/>
+<line x1="226.0" y1="518.0" x2="226.0" y2="115.0" class="ext"/>
+<line x1="136.0" y1="120.0" x2="226.0" y2="120.0" class="dl"/>
+<line x1="132.8" y1="123.2" x2="139.2" y2="116.8" class="tick"/>
+<line x1="222.8" y1="123.2" x2="229.2" y2="116.8" class="tick"/>
+<text x="181.0" y="113.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 181.0 113.0)">11-1/4"</text>
+<line x1="226.0" y1="463.0" x2="226.0" y2="115.0" class="ext"/>
+<line x1="316.0" y1="463.0" x2="316.0" y2="115.0" class="ext"/>
+<line x1="226.0" y1="120.0" x2="316.0" y2="120.0" class="dl"/>
+<line x1="222.8" y1="123.2" x2="229.2" y2="116.8" class="tick"/>
+<line x1="312.8" y1="123.2" x2="319.2" y2="116.8" class="tick"/>
+<text x="271.0" y="113.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 271.0 113.0)">11-1/4"</text>
+<line x1="316.0" y1="408.0" x2="316.0" y2="115.0" class="ext"/>
+<line x1="406.0" y1="408.0" x2="406.0" y2="115.0" class="ext"/>
+<line x1="316.0" y1="120.0" x2="406.0" y2="120.0" class="dl"/>
+<line x1="312.8" y1="123.2" x2="319.2" y2="116.8" class="tick"/>
+<line x1="402.8" y1="123.2" x2="409.2" y2="116.8" class="tick"/>
+<text x="361.0" y="113.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 361.0 113.0)">11-1/4"</text>
+<line x1="406.0" y1="353.0" x2="406.0" y2="115.0" class="ext"/>
+<line x1="496.0" y1="353.0" x2="496.0" y2="115.0" class="ext"/>
+<line x1="406.0" y1="120.0" x2="496.0" y2="120.0" class="dl"/>
+<line x1="402.8" y1="123.2" x2="409.2" y2="116.8" class="tick"/>
+<line x1="492.8" y1="123.2" x2="499.2" y2="116.8" class="tick"/>
+<text x="451.0" y="113.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 451.0 113.0)">11-1/4"</text>
+<line x1="496.0" y1="298.0" x2="496.0" y2="115.0" class="ext"/>
+<line x1="586.0" y1="298.0" x2="586.0" y2="115.0" class="ext"/>
+<line x1="496.0" y1="120.0" x2="586.0" y2="120.0" class="dl"/>
+<line x1="492.8" y1="123.2" x2="499.2" y2="116.8" class="tick"/>
+<line x1="582.8" y1="123.2" x2="589.2" y2="116.8" class="tick"/>
+<text x="541.0" y="113.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 541.0 113.0)">11-1/4"</text>
+<line x1="586.0" y1="243.0" x2="586.0" y2="115.0" class="ext"/>
+<line x1="676.0" y1="243.0" x2="676.0" y2="115.0" class="ext"/>
+<line x1="586.0" y1="120.0" x2="676.0" y2="120.0" class="dl"/>
+<line x1="582.8" y1="123.2" x2="589.2" y2="116.8" class="tick"/>
+<line x1="672.8" y1="123.2" x2="679.2" y2="116.8" class="tick"/>
+<text x="631.0" y="113.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 631.0 113.0)">11-1/4"</text>
+<line x1="676.0" y1="188.0" x2="676.0" y2="115.0" class="ext"/>
+<line x1="766.0" y1="188.0" x2="766.0" y2="115.0" class="ext"/>
+<line x1="676.0" y1="120.0" x2="766.0" y2="120.0" class="dl"/>
+<line x1="672.8" y1="123.2" x2="679.2" y2="116.8" class="tick"/>
+<line x1="762.8" y1="123.2" x2="769.2" y2="116.8" class="tick"/>
+<text x="721.0" y="113.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 721.0 113.0)">landing</text>
+<line x1="136.0" y1="518.0" x2="136.0" y2="79.0" class="ext"/>
+<line x1="676.0" y1="518.0" x2="676.0" y2="79.0" class="ext"/>
+<line x1="136.0" y1="84.0" x2="676.0" y2="84.0" class="dl"/>
+<line x1="132.8" y1="87.2" x2="139.2" y2="80.8" class="tick"/>
+<line x1="672.8" y1="87.2" x2="679.2" y2="80.8" class="tick"/>
+<text x="406.0" y="77.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 406.0 77.0)">67-1/2" run, nosing to landing nosing</text>
+<line x1="136.0" y1="518.0" x2="136.0" y2="47.0" class="ext"/>
+<line x1="766.0" y1="518.0" x2="766.0" y2="47.0" class="ext"/>
+<line x1="136.0" y1="52.0" x2="766.0" y2="52.0" class="dl"/>
+<line x1="132.8" y1="55.2" x2="139.2" y2="48.8" class="tick"/>
+<line x1="762.8" y1="55.2" x2="769.2" y2="48.8" class="tick"/>
+<text x="451.0" y="45.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 451.0 45.0)">78-3/4" first riser to wall face</text>
+<path d="M 486.0 356.0 A 80 80 0 0 0 474.3 314.3" class="dl" fill="none"/>
+<text x="491.0" y="346.0" text-anchor="start" class="dt">31.43°</text>
+<line x1="498.6" y1="392.4" x2="527.6" y2="374.7" class="ext"/>
+<line x1="531.9" y1="447.0" x2="560.9" y2="429.3" class="ext"/>
+<line x1="523.3" y1="377.3" x2="556.7" y2="431.9" class="dl"/>
+<line x1="518.9" y1="376.3" x2="527.7" y2="378.4" class="tick"/>
+<line x1="552.3" y1="430.9" x2="561.1" y2="433.0" class="tick"/>
+<text x="546.0" y="401.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(58.57 546.0 401.0)">8"</text>
+<text x="870.0" y="205.0" text-anchor="start" class="sm">T.O. wall = landing tread +48-1/8"</text>
+<text x="4.0" y="571.0" text-anchor="start" class="sm">finish grade ±0, M4 bears direct</text>
+<circle cx="255.0" cy="478.8" r="2.4" class="dot"/>
+<polyline points="255.0,478.8 152.0,400.0 164.0,400.0" class="ldr" fill="none"/>
+<circle cx="177.0" cy="400.0" r="12.5" class="bub"/>
+<text x="177.0" y="400.0" text-anchor="middle" dominant-baseline="central" class="bt">W1</text>
+<text x="194.0" y="400.0" text-anchor="start" dominant-baseline="central" class="lt">tread frame + ash planks (×7)</text>
+<circle cx="549.0" cy="352.0" r="2.4" class="dot"/>
+<polyline points="549.0,352.0 152.0,304.0 164.0,304.0" class="ldr" fill="none"/>
+<circle cx="177.0" cy="304.0" r="12.5" class="bub"/>
+<text x="177.0" y="304.0" text-anchor="middle" dominant-baseline="central" class="bt">M2</text>
+<text x="194.0" y="297.5" text-anchor="start" dominant-baseline="central" class="lt">HSS 6×4×1/4 stub (×6)</text>
+<text x="194.0" y="310.5" text-anchor="start" dominant-baseline="central" class="lt">6" at ℄, all identical</text>
+<circle cx="373.0" cy="439.8" r="2.4" class="dot"/>
+<polyline points="373.0,439.8 152.0,352.0 164.0,352.0" class="ldr" fill="none"/>
+<circle cx="177.0" cy="352.0" r="12.5" class="bub"/>
+<text x="177.0" y="352.0" text-anchor="middle" dominant-baseline="central" class="bt">M8</text>
+<text x="194.0" y="352.0" text-anchor="start" dominant-baseline="central" class="lt">stub between two collars under each tread (×7)</text>
+<circle cx="451.0" cy="276.0" r="2.4" class="dot"/>
+<polyline points="451.0,276.0 152.0,200.0 164.0,200.0" class="ldr" fill="none"/>
+<circle cx="177.0" cy="200.0" r="12.5" class="bub"/>
+<text x="177.0" y="200.0" text-anchor="middle" dominant-baseline="central" class="bt">G</text>
+<text x="194.0" y="193.5" text-anchor="start" dominant-baseline="central" class="lt">guard posts centred on treads 1 and 4;</text>
+<text x="194.0" y="206.5" text-anchor="start" dominant-baseline="central" class="lt">landing post in line with the nose, see S-104</text>
+<circle cx="576.0" cy="381.9" r="2.4" class="dot"/>
+<polyline points="576.0,381.9 472.0,528.0 484.0,528.0" class="ldr" fill="none"/>
+<circle cx="497.0" cy="528.0" r="12.5" class="bub"/>
+<text x="497.0" y="528.0" text-anchor="middle" dominant-baseline="central" class="bt">M1</text>
+<text x="514.0" y="521.5" text-anchor="start" dominant-baseline="central" class="lt">HSS 8×4×1/4 mono stringer</text>
+<text x="514.0" y="534.5" text-anchor="start" dominant-baseline="central" class="lt">long point 81-5/8"</text>
+<circle cx="296.0" cy="573.6" r="2.4" class="dot"/>
+<polyline points="296.0,573.6 424.0,608.0 436.0,608.0" class="ldr" fill="none"/>
+<circle cx="449.0" cy="608.0" r="12.5" class="bub"/>
+<text x="449.0" y="608.0" text-anchor="middle" dominant-baseline="central" class="bt">M4</text>
+<text x="466.0" y="608.0" text-anchor="start" dominant-baseline="central" class="lt">base PL 1/2×12×30 on grade</text>
+<circle cx="181.0" cy="563.2" r="2.4" class="dot"/>
+<polyline points="181.0,563.2 424.0,640.0 436.0,640.0" class="ldr" fill="none"/>
+<circle cx="449.0" cy="640.0" r="12.5" class="bub"/>
+<text x="449.0" y="640.0" text-anchor="middle" dominant-baseline="central" class="bt">M2b</text>
+<text x="466.0" y="640.0" text-anchor="start" dominant-baseline="central" class="lt">tread 1 stub on M4, 6 in the run</text>
+<circle cx="178.0" cy="608.0" r="2.4" class="dot"/>
+<polyline points="178.0,608.0 424.0,668.0 436.0,668.0" class="ldr" fill="none"/>
+<circle cx="449.0" cy="668.0" r="12.5" class="bub"/>
+<text x="449.0" y="668.0" text-anchor="middle" dominant-baseline="central" class="bt">A2</text>
+<text x="466.0" y="668.0" text-anchor="start" dominant-baseline="central" class="lt">existing all-thread (4), measured</text>
+<circle cx="764.0" cy="336.9" r="2.4" class="dot"/>
+<polyline points="764.0,336.9 904.0,400.0 916.0,400.0" class="ldr" fill="none"/>
+<circle cx="929.0" cy="400.0" r="12.5" class="bub"/>
+<text x="929.0" y="400.0" text-anchor="middle" dominant-baseline="central" class="bt">M6</text>
+<text x="946.0" y="400.0" text-anchor="start" dominant-baseline="central" class="lt">wall PL 1/2×12×16</text>
+<circle cx="798.0" cy="252.9" r="2.4" class="dot"/>
+<polyline points="798.0,252.9 904.0,272.0 916.0,272.0" class="ldr" fill="none"/>
+<circle cx="929.0" cy="272.0" r="12.5" class="bub"/>
+<text x="929.0" y="272.0" text-anchor="middle" dominant-baseline="central" class="bt">A1</text>
+<text x="946.0" y="272.0" text-anchor="start" dominant-baseline="central" class="lt">1/2" adhesive anchors (6)</text></svg></div><figcaption>The assembled flight.</figcaption></figure><figure class="big"><div class="scroll"><svg viewBox="0 0 1034 253" width="1034" height="253" role="img" aria-label="Typical tread, front elevation" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="tscc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="tswd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="tsst" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="tsgr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><rect x="66.0" y="60.5" width="528.0" height="16.5" rx="0" class="steel ob"/>
+<rect x="66.0" y="41.2" width="528.0" height="19.2" rx="0" fill="url(#tswd)" class=" ob"/>
+<rect x="184.2" y="60.5" width="16.5" height="16.5" rx="0" class="hid"/>
+<rect x="459.2" y="60.5" width="16.5" height="16.5" rx="0" class="hid"/>
+<rect x="66.0" y="60.5" width="33.0" height="16.5" rx="0" class="hid"/>
+<rect x="561.0" y="60.5" width="33.0" height="16.5" rx="0" class="hid"/>
+<rect x="303.2" y="60.5" width="4.1" height="16.5" rx="0" class="hid"/>
+<rect x="352.7" y="60.5" width="4.1" height="16.5" rx="0" class="hid"/>
+<rect x="308.0" y="60.5" width="44.0" height="4.1" rx="0" class="hid"/>
+<rect x="308.0" y="66.0" width="44.0" height="11.0" rx="0" class="hid"/>
+<rect x="308.0" y="64.6" width="44.0" height="1.4" rx="0" class="pad"/>
+<line x1="298.1" y1="71.5" x2="361.9" y2="71.5" class="hidp"/>
+<rect x="308.0" y="77.0" width="44.0" height="55.0" rx="0" class="steel ob"/>
+<rect x="308.0" y="132.0" width="44.0" height="103.1" rx="0" class="steel ob"/>
+<line x1="330.0" y1="253.0" x2="330.0" y2="5.5" class="cl"/>
+<line x1="66.0" y1="38.2" x2="66.0" y2="12.0" class="ext"/>
+<line x1="594.0" y1="38.2" x2="594.0" y2="12.0" class="ext"/>
+<line x1="66.0" y1="17.0" x2="594.0" y2="17.0" class="dl"/>
+<line x1="62.8" y1="20.2" x2="69.2" y2="13.9" class="tick"/>
+<line x1="590.8" y1="20.2" x2="597.2" y2="13.9" class="tick"/>
+<text x="330.0" y="10.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 330.0 10.0)">48" tread</text>
+<line x1="330.0" y1="38.2" x2="330.0" y2="25.2" class="ext"/>
+<line x1="467.5" y1="38.2" x2="467.5" y2="25.2" class="ext"/>
+<line x1="330.0" y1="30.2" x2="467.5" y2="30.2" class="dl"/>
+<line x1="326.8" y1="33.4" x2="333.2" y2="27.1" class="tick"/>
+<line x1="464.3" y1="33.4" x2="470.7" y2="27.1" class="tick"/>
+<text x="398.8" y="23.2" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 398.8 23.2)">12-1/2</text>
+<line x1="597.0" y1="77.0" x2="612.2" y2="77.0" class="ext"/>
+<line x1="597.0" y1="60.5" x2="612.2" y2="60.5" class="ext"/>
+<line x1="607.2" y1="77.0" x2="607.2" y2="60.5" class="dl"/>
+<line x1="610.4" y1="80.2" x2="604.0" y2="73.8" class="tick"/>
+<line x1="610.4" y1="63.7" x2="604.0" y2="57.3" class="tick"/>
+<text x="614.2" y="68.8" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 614.2 68.8)">1-1/2</text>
+<line x1="597.0" y1="60.5" x2="627.6" y2="60.5" class="ext"/>
+<line x1="597.0" y1="41.2" x2="627.6" y2="41.2" class="ext"/>
+<line x1="622.6" y1="60.5" x2="622.6" y2="41.2" class="dl"/>
+<line x1="625.8" y1="63.7" x2="619.4" y2="57.3" class="tick"/>
+<line x1="625.8" y1="44.4" x2="619.4" y2="38.1" class="tick"/>
+<text x="629.6" y="50.9" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 629.6 50.9)">1-3/4</text>
+<line x1="305.0" y1="132.0" x2="274.4" y2="132.0" class="ext"/>
+<line x1="305.0" y1="77.0" x2="274.4" y2="77.0" class="ext"/>
+<line x1="279.4" y1="132.0" x2="279.4" y2="77.0" class="dl"/>
+<line x1="282.6" y1="135.2" x2="276.2" y2="128.8" class="tick"/>
+<line x1="282.6" y1="80.2" x2="276.2" y2="73.8" class="tick"/>
+<text x="272.4" y="104.5" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 272.4 104.5)">5 air</text>
+<line x1="308.0" y1="238.1" x2="308.0" y2="251.1" class="ext"/>
+<line x1="352.0" y1="238.1" x2="352.0" y2="251.1" class="ext"/>
+<line x1="308.0" y1="246.1" x2="352.0" y2="246.1" class="dl"/>
+<line x1="304.8" y1="249.3" x2="311.2" y2="242.9" class="tick"/>
+<line x1="348.8" y1="249.3" x2="355.2" y2="242.9" class="tick"/>
+<text x="330.0" y="253.1" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 330.0 253.1)">4</text>
+<circle cx="154.0" cy="50.6" r="2.4" class="dot"/>
+<polyline points="154.0,50.6 660.0,16.5 672.0,16.5" class="ldr" fill="none"/>
+<circle cx="685.0" cy="16.5" r="12.5" class="bub"/>
+<text x="685.0" y="16.5" text-anchor="middle" dominant-baseline="central" class="bt">W1</text>
+<text x="702.0" y="16.5" text-anchor="start" dominant-baseline="central" class="lt">Ash planks 5-1/2 × 1-3/4, 3/16 reveal</text>
+<circle cx="132.0" cy="68.8" r="2.4" class="dot"/>
+<polyline points="132.0,68.8 660.0,44.0 672.0,44.0" class="ldr" fill="none"/>
+<circle cx="685.0" cy="44.0" r="12.5" class="bub"/>
+<text x="685.0" y="44.0" text-anchor="middle" dominant-baseline="central" class="bt">M7</text>
+<text x="702.0" y="44.0" text-anchor="start" dominant-baseline="central" class="lt">HSS 2-1/2×1-1/2×3/16 frame, front member shown solid</text>
+<circle cx="467.5" cy="68.8" r="2.4" class="dot"/>
+<polyline points="467.5,68.8 660.0,71.5 672.0,71.5" class="ldr" fill="none"/>
+<circle cx="685.0" cy="71.5" r="12.5" class="bub"/>
+<text x="685.0" y="71.5" text-anchor="middle" dominant-baseline="central" class="bt">J</text>
+<text x="702.0" y="71.5" text-anchor="start" dominant-baseline="central" class="lt">1-1/2 sq joists at ±12-1/2 (hidden)</text>
+<circle cx="341.0" cy="62.7" r="2.4" class="dot"/>
+<polyline points="341.0,62.7 660.0,99.0 672.0,99.0" class="ldr" fill="none"/>
+<circle cx="685.0" cy="99.0" r="12.5" class="bub"/>
+<text x="685.0" y="99.0" text-anchor="middle" dominant-baseline="central" class="bt">M3</text>
+<text x="702.0" y="99.0" text-anchor="start" dominant-baseline="central" class="lt">3/8 × 4 plate between the collars, flush with the frame top (hidden)</text>
+<circle cx="354.8" cy="73.7" r="2.4" class="dot"/>
+<polyline points="354.8,73.7 660.0,126.5 672.0,126.5" class="ldr" fill="none"/>
+<circle cx="685.0" cy="126.5" r="12.5" class="bub"/>
+<text x="685.0" y="126.5" text-anchor="middle" dominant-baseline="central" class="bt">M8</text>
+<text x="702.0" y="126.5" text-anchor="start" dominant-baseline="central" class="lt">(2) 3/8 × 1-1/2 collars, 1/16 clear of the stub (hidden)</text>
+<circle cx="359.7" cy="71.5" r="2.4" class="dot"/>
+<polyline points="359.7,71.5 660.0,154.0 672.0,154.0" class="ldr" fill="none"/>
+<circle cx="685.0" cy="154.0" r="12.5" class="bub"/>
+<text x="685.0" y="154.0" text-anchor="middle" dominant-baseline="central" class="bt">H1</text>
+<text x="702.0" y="154.0" text-anchor="start" dominant-baseline="central" class="lt">(2) 3/8 through bolts, both collars and the stub</text>
+<circle cx="330.0" cy="65.3" r="2.4" class="dot"/>
+<polyline points="330.0,65.3 660.0,209.0 672.0,209.0" class="ldr" fill="none"/>
+<circle cx="685.0" cy="209.0" r="12.5" class="bub"/>
+<text x="685.0" y="209.0" text-anchor="middle" dominant-baseline="central" class="bt">H2</text>
+<text x="702.0" y="209.0" text-anchor="start" dominant-baseline="central" class="lt">1/8 EPDM pad on the open stub top</text>
+<circle cx="350.9" cy="104.5" r="2.4" class="dot"/>
+<polyline points="350.9,104.5 44.0,165.0 56.0,165.0" class="ldr" fill="none"/>
+<circle cx="69.0" cy="165.0" r="12.5" class="bub"/>
+<text x="69.0" y="165.0" text-anchor="middle" dominant-baseline="central" class="bt">M2</text>
+<text x="86.0" y="165.0" text-anchor="start" dominant-baseline="central" class="lt">HSS 6×4×1/4 stub, 6 at ℄, 1 in up inside the frame</text>
+<circle cx="350.9" cy="176.0" r="2.4" class="dot"/>
+<polyline points="350.9,176.0 44.0,220.0 56.0,220.0" class="ldr" fill="none"/>
+<circle cx="69.0" cy="220.0" r="12.5" class="bub"/>
+<text x="69.0" y="220.0" text-anchor="middle" dominant-baseline="central" class="bt">M1</text>
+<text x="86.0" y="220.0" text-anchor="start" dominant-baseline="central" class="lt">HSS 8×4×1/4 stringer</text></svg></div><figcaption>A tread, front elevation.</figcaption></figure></div></article><article class="sheet" id="sU-M4"><header class="tb"><div class="num">U-M4</div><div class="ttl"><h2>M4 Base plate</h2><p>Upper stairs</p></div></header><div class="body"><p class="qty"><b>Quantity:</b> 1</p><h3>Material</h3><div class="scroll"><table class="grid"><thead><tr><th>Stock</th><th>Grade</th><th>Cut</th><th>Total for this flight</th></tr></thead><tbody><tr><td>PL 1/2</td><td>A36</td><td>12 × 30</td><td>1 pc</td></tr></tbody></table></div><h3>Hardware</h3><div class="scroll"><table class="grid"><thead><tr><th>Mark</th><th>Qty</th><th>Item</th></tr></thead><tbody><tr><td>A2</td><td>4 sets</td><td>Nut, 1-1/4 OD hardened washer and acorn cap on the existing 1/2 pier rods</td></tr><tr><td>—</td><td>1</td><td>Self-adhered flashing under the plate</td></tr></tbody></table></div><h3>Fabrication detail</h3><figure class="big"><div class="scroll"><svg viewBox="0 0 792 432" width="792" height="432" role="img" aria-label="M4 base plate, plan from above" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="bppcc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="bppwd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="bppst" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="bppgr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><rect x="96.0" y="42.0" width="144.0" height="360.0" rx="0" class="steel ob"/>
+<circle cx="136.5" cy="375.0" r="3.4" class="void ob"/>
+<circle cx="199.5" cy="375.0" r="3.4" class="void ob"/>
+<circle cx="136.5" cy="321.0" r="3.4" class="void ob"/>
+<circle cx="199.5" cy="321.0" r="3.4" class="void ob"/>
+<rect x="144.0" y="280.5" width="48.0" height="72.0" rx="0" class="hid"/>
+<rect x="144.0" y="96.8" width="48.0" height="184.1" rx="0" class="hid"/>
+<line x1="72.0" y1="384.0" x2="264.0" y2="384.0" class="thin"/>
+<text x="68.0" y="388.0" text-anchor="end" class="sm">first riser</text>
+<line x1="168.0" y1="420.0" x2="168.0" y2="24.0" class="cl"/>
+<line x1="243.0" y1="402.0" x2="276.2" y2="402.0" class="ext"/>
+<line x1="243.0" y1="42.0" x2="276.2" y2="42.0" class="ext"/>
+<line x1="271.2" y1="402.0" x2="271.2" y2="42.0" class="dl"/>
+<line x1="274.4" y1="405.2" x2="268.0" y2="398.8" class="tick"/>
+<line x1="274.4" y1="45.2" x2="268.0" y2="38.8" class="tick"/>
+<text x="278.2" y="222.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 278.2 222.0)">30"</text>
+<line x1="243.0" y1="384.0" x2="259.4" y2="384.0" class="ext"/>
+<line x1="243.0" y1="375.0" x2="259.4" y2="375.0" class="ext"/>
+<line x1="254.4" y1="384.0" x2="254.4" y2="375.0" class="dl"/>
+<line x1="257.6" y1="387.2" x2="251.2" y2="380.8" class="tick"/>
+<line x1="257.6" y1="378.2" x2="251.2" y2="371.8" class="tick"/>
+<text x="261.4" y="379.5" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 261.4 379.5)">3/4"</text>
+<line x1="243.0" y1="375.0" x2="259.4" y2="375.0" class="ext"/>
+<line x1="243.0" y1="321.0" x2="259.4" y2="321.0" class="ext"/>
+<line x1="254.4" y1="375.0" x2="254.4" y2="321.0" class="dl"/>
+<line x1="257.6" y1="378.2" x2="251.2" y2="371.8" class="tick"/>
+<line x1="257.6" y1="324.2" x2="251.2" y2="317.8" class="tick"/>
+<text x="261.4" y="348.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 261.4 348.0)">4-1/2"</text>
+<line x1="136.5" y1="405.0" x2="136.5" y2="423.8" class="ext"/>
+<line x1="199.5" y1="405.0" x2="199.5" y2="423.8" class="ext"/>
+<line x1="136.5" y1="418.8" x2="199.5" y2="418.8" class="dl"/>
+<line x1="133.3" y1="422.0" x2="139.7" y2="415.6" class="tick"/>
+<line x1="196.3" y1="422.0" x2="202.7" y2="415.6" class="tick"/>
+<text x="168.0" y="425.8" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 168.0 425.8)">5-1/4"</text>
+<line x1="96.0" y1="405.0" x2="96.0" y2="443.0" class="ext"/>
+<line x1="240.0" y1="405.0" x2="240.0" y2="443.0" class="ext"/>
+<line x1="96.0" y1="438.0" x2="240.0" y2="438.0" class="dl"/>
+<line x1="92.8" y1="441.2" x2="99.2" y2="434.8" class="tick"/>
+<line x1="236.8" y1="441.2" x2="243.2" y2="434.8" class="tick"/>
+<text x="168.0" y="445.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 168.0 445.0)">12"</text>
+<line x1="93.0" y1="352.5" x2="74.2" y2="352.5" class="ext"/>
+<line x1="93.0" y1="280.5" x2="74.2" y2="280.5" class="ext"/>
+<line x1="79.2" y1="352.5" x2="79.2" y2="280.5" class="dl"/>
+<line x1="82.4" y1="355.7" x2="76.0" y2="349.3" class="tick"/>
+<line x1="82.4" y1="283.7" x2="76.0" y2="277.3" class="tick"/>
+<text x="72.2" y="316.5" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 72.2 316.5)">6</text>
+<line x1="93.0" y1="280.9" x2="74.2" y2="280.9" class="ext"/>
+<line x1="93.0" y1="96.8" x2="74.2" y2="96.8" class="ext"/>
+<line x1="79.2" y1="280.9" x2="79.2" y2="96.8" class="dl"/>
+<line x1="82.4" y1="284.1" x2="76.0" y2="277.7" class="tick"/>
+<line x1="82.4" y1="100.0" x2="76.0" y2="93.6" class="tick"/>
+<text x="72.2" y="188.9" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 72.2 188.9)">15-5/16" level cut</text>
+<line x1="57.0" y1="384.0" x2="55.0" y2="384.0" class="ext"/>
+<line x1="57.0" y1="280.9" x2="55.0" y2="280.9" class="ext"/>
+<line x1="60.0" y1="384.0" x2="60.0" y2="280.9" class="dl"/>
+<line x1="63.2" y1="387.2" x2="56.8" y2="380.8" class="tick"/>
+<line x1="63.2" y1="284.1" x2="56.8" y2="277.7" class="tick"/>
+<text x="53.0" y="332.5" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 53.0 332.5)">8-9/16"</text>
+<circle cx="199.5" cy="321.0" r="2.4" class="dot"/>
+<polyline points="199.5,321.0 336.0,336.0 348.0,336.0" class="ldr" fill="none"/>
+<circle cx="361.0" cy="336.0" r="12.5" class="bub"/>
+<text x="361.0" y="336.0" text-anchor="middle" dominant-baseline="central" class="bt">1</text>
+<text x="378.0" y="336.0" text-anchor="start" dominant-baseline="central" class="lt">(4) 9/16 holes, drilled at dry fit to the rods as set</text>
+<circle cx="168.0" cy="316.5" r="2.4" class="dot"/>
+<polyline points="168.0,316.5 336.0,276.0 348.0,276.0" class="ldr" fill="none"/>
+<circle cx="361.0" cy="276.0" r="12.5" class="bub"/>
+<text x="361.0" y="276.0" text-anchor="middle" dominant-baseline="central" class="bt">2</text>
+<text x="378.0" y="269.5" text-anchor="start" dominant-baseline="central" class="lt">M2b stub footprint, 4 across x 6 in the run;</text>
+<text x="378.0" y="282.5" text-anchor="start" dominant-baseline="central" class="lt">notched at dry fit where the M1 toe lands</text>
+<circle cx="168.0" cy="188.9" r="2.4" class="dot"/>
+<polyline points="168.0,188.9 336.0,192.0 348.0,192.0" class="ldr" fill="none"/>
+<circle cx="361.0" cy="192.0" r="12.5" class="bub"/>
+<text x="361.0" y="192.0" text-anchor="middle" dominant-baseline="central" class="bt">3</text>
+<text x="378.0" y="192.0" text-anchor="start" dominant-baseline="central" class="lt">M1 level cut footprint, 4 wide</text>
+<circle cx="216.0" cy="72.0" r="2.4" class="dot"/>
+<polyline points="216.0,72.0 336.0,96.0 348.0,96.0" class="ldr" fill="none"/>
+<circle cx="361.0" cy="96.0" r="12.5" class="bub"/>
+<text x="361.0" y="96.0" text-anchor="middle" dominant-baseline="central" class="bt">4</text>
+<text x="378.0" y="96.0" text-anchor="start" dominant-baseline="central" class="lt">PL 1/2 x 12 x 30; self-adhered flashing underneath</text></svg></div><figcaption>Rod holes drilled through M4 onto the rods as set.</figcaption></figure><figure class="big"><div class="scroll"><svg viewBox="0 0 1043 330" width="1043" height="330" role="img" aria-label="Base connection" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="bdcc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="bdwd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="bdst" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="bdgr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><line x1="0.0" y1="198.0" x2="1042.8" y2="198.0" class="grade"/>
+<rect x="0.0" y="198.0" width="1042.8" height="18.5" rx="0" fill="url(#bdgr)" class=" none"/>
+<rect x="105.6" y="198.3" width="356.4" height="118.5" rx="0" class="hid"/>
+<rect x="151.8" y="191.4" width="396.0" height="6.6" rx="0" class="steel ob"/>
+<line x1="181.5" y1="277.2" x2="181.5" y2="178.2" class="rod"/>
+<rect x="168.3" y="188.1" width="26.4" height="3.3" rx="0" class="steel ob"/>
+<rect x="174.2" y="180.2" width="14.5" height="7.9" rx="0" class="nut"/>
+<line x1="240.9" y1="277.2" x2="240.9" y2="178.2" class="rod"/>
+<rect x="227.7" y="188.1" width="26.4" height="3.3" rx="0" class="steel ob"/>
+<rect x="233.6" y="180.2" width="14.5" height="7.9" rx="0" class="nut"/>
+<polygon points="285.0,191.4 607.2,-5.5 607.2,118.3 487.5,191.4" class="steel ob"/>
+<line x1="607.2" y1="-14.7" x2="607.2" y2="127.5" class="brk"/>
+<rect x="171.6" y="130.3" width="148.5" height="19.8" rx="0" class="steel ob"/>
+<rect x="171.6" y="107.2" width="72.6" height="23.1" rx="0" fill="url(#bdwd)" class=" ob"/>
+<rect x="246.7" y="107.2" width="73.4" height="23.1" rx="0" fill="url(#bdwd)" class=" ob"/>
+<rect x="204.6" y="130.3" width="82.5" height="4.9" rx="0" class="hid"/>
+<rect x="204.6" y="135.3" width="82.5" height="14.8" rx="0" class="hid"/>
+<rect x="206.2" y="150.2" width="79.2" height="41.2" rx="0" class="steel ob"/>
+<rect x="206.2" y="136.1" width="79.2" height="14.0" rx="0" class="hid"/>
+<rect x="320.1" y="39.6" width="148.5" height="19.8" rx="0" class="steel ob"/>
+<rect x="320.1" y="16.5" width="72.6" height="23.1" rx="0" fill="url(#bdwd)" class=" ob"/>
+<rect x="395.2" y="16.5" width="73.4" height="23.1" rx="0" fill="url(#bdwd)" class=" ob"/>
+<rect x="353.1" y="39.6" width="82.5" height="4.9" rx="0" class="hid"/>
+<rect x="353.1" y="44.5" width="82.5" height="14.8" rx="0" class="hid"/>
+<polygon points="354.8,59.4 433.9,59.4 433.9,100.4 354.8,148.8" class="steel ob"/>
+<rect x="354.8" y="45.4" width="79.2" height="14.0" rx="0" class="hid"/>
+<line x1="142.2" y1="107.2" x2="100.6" y2="107.2" class="ext"/>
+<line x1="142.2" y1="198.0" x2="100.6" y2="198.0" class="ext"/>
+<line x1="105.6" y1="107.2" x2="105.6" y2="198.0" class="dl"/>
+<line x1="102.4" y1="104.1" x2="108.8" y2="110.4" class="tick"/>
+<line x1="102.4" y1="194.8" x2="108.8" y2="201.2" class="tick"/>
+<text x="98.6" y="152.6" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(90.00 98.6 152.6)">6-7/8" riser</text>
+<line x1="148.8" y1="191.4" x2="129.6" y2="191.4" class="ext"/>
+<line x1="148.8" y1="198.0" x2="129.6" y2="198.0" class="ext"/>
+<line x1="134.6" y1="191.4" x2="134.6" y2="198.0" class="dl"/>
+<line x1="131.5" y1="188.2" x2="137.8" y2="194.6" class="tick"/>
+<line x1="131.5" y1="194.8" x2="137.8" y2="201.2" class="tick"/>
+<text x="127.6" y="194.7" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(90.00 127.6 194.7)">1/2"</text>
+<line x1="300.7" y1="191.4" x2="313.2" y2="191.4" class="ext"/>
+<line x1="300.7" y1="136.1" x2="313.2" y2="136.1" class="ext"/>
+<line x1="308.2" y1="191.4" x2="308.2" y2="136.1" class="dl"/>
+<line x1="311.4" y1="194.6" x2="305.0" y2="188.2" class="tick"/>
+<line x1="311.4" y1="139.3" x2="305.0" y2="132.9" class="tick"/>
+<text x="315.2" y="163.8" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 315.2 163.8)">4-3/16"</text>
+<line x1="151.8" y1="201.0" x2="151.8" y2="255.8" class="ext"/>
+<line x1="547.8" y1="201.0" x2="547.8" y2="255.8" class="ext"/>
+<line x1="151.8" y1="250.8" x2="547.8" y2="250.8" class="dl"/>
+<line x1="148.6" y1="254.0" x2="155.0" y2="247.6" class="tick"/>
+<line x1="544.6" y1="254.0" x2="551.0" y2="247.6" class="tick"/>
+<text x="349.8" y="257.8" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 349.8 257.8)">30" base PL</text>
+<line x1="285.0" y1="194.4" x2="285.0" y2="225.4" class="ext"/>
+<line x1="487.5" y1="194.4" x2="487.5" y2="225.4" class="ext"/>
+<line x1="285.0" y1="220.4" x2="487.5" y2="220.4" class="dl"/>
+<line x1="281.8" y1="223.6" x2="288.2" y2="217.3" class="tick"/>
+<line x1="484.3" y1="223.6" x2="490.7" y2="217.3" class="tick"/>
+<text x="386.3" y="227.4" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 386.3 227.4)">15-5/16" level cut</text>
+<line x1="285.4" y1="188.4" x2="285.4" y2="107.2" class="ext"/>
+<line x1="285.0" y1="188.4" x2="285.0" y2="107.2" class="ext"/>
+<line x1="285.4" y1="112.2" x2="285.0" y2="112.2" class="dl"/>
+<line x1="288.6" y1="109.0" x2="282.3" y2="115.4" class="tick"/>
+<line x1="288.2" y1="109.0" x2="281.8" y2="115.4" class="tick"/>
+<text x="285.2" y="105.2" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(360.00 285.2 105.2)">-1/16" stub to stringer toe</text>
+<line x1="181.5" y1="234.0" x2="181.5" y2="251.8" class="ext"/>
+<line x1="240.9" y1="234.0" x2="240.9" y2="251.8" class="ext"/>
+<line x1="181.5" y1="246.8" x2="240.9" y2="246.8" class="dl"/>
+<line x1="178.3" y1="250.0" x2="184.7" y2="243.7" class="tick"/>
+<line x1="237.7" y1="250.0" x2="244.1" y2="243.7" class="tick"/>
+<text x="211.2" y="253.8" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 211.2 253.8)">4-1/2" rod spacing</text>
+<circle cx="245.8" cy="176.9" r="2.4" class="dot"/>
+<polyline points="245.8,176.9 633.6,46.2 645.6,46.2" class="ldr" fill="none"/>
+<circle cx="658.6" cy="46.2" r="12.5" class="bub"/>
+<text x="658.6" y="46.2" text-anchor="middle" dominant-baseline="central" class="bt">M2b</text>
+<text x="675.6" y="39.7" text-anchor="start" dominant-baseline="central" class="lt">HSS 6×4×1/4 stub, square cut, welded to M4,</text>
+<text x="675.6" y="52.7" text-anchor="start" dominant-baseline="central" class="lt">notched at dry fit for the M1 toe</text>
+<circle cx="240.9" cy="183.5" r="2.4" class="dot"/>
+<polyline points="240.9,183.5 633.6,257.4 645.6,257.4" class="ldr" fill="none"/>
+<circle cx="658.6" cy="257.4" r="12.5" class="bub"/>
+<text x="658.6" y="257.4" text-anchor="middle" dominant-baseline="central" class="bt">A2</text>
+<text x="675.6" y="250.9" text-anchor="start" dominant-baseline="central" class="lt">1/2 rods at 3/4 and 5-1/4 from the first riser</text>
+<text x="675.6" y="263.9" text-anchor="start" dominant-baseline="central" class="lt">5-1/4 apart across, 1-1/4 round washers</text>
+<circle cx="289.0" cy="189.4" r="2.4" class="dot"/>
+<polyline points="289.0,189.4 633.6,129.4 645.6,129.4" class="ldr" fill="none"/>
+<circle cx="658.6" cy="129.4" r="12.5" class="bub"/>
+<text x="658.6" y="129.4" text-anchor="middle" dominant-baseline="central" class="bt">V</text>
+<text x="675.6" y="122.9" text-anchor="start" dominant-baseline="central" class="lt">3/16" weep notch at the lowest</text>
+<text x="675.6" y="135.9" text-anchor="start" dominant-baseline="central" class="lt">corner of M1 on M4, left open</text>
+<circle cx="280.2" cy="186.4" r="1.2" class="void ob"/>
+<circle cx="280.2" cy="186.4" r="2.4" class="dot"/>
+<polyline points="280.2,186.4 633.6,163.7 645.6,163.7" class="ldr" fill="none"/>
+<circle cx="658.6" cy="163.7" r="12.5" class="bub"/>
+<text x="658.6" y="163.7" text-anchor="middle" dominant-baseline="central" class="bt">W</text>
+<text x="675.6" y="157.2" text-anchor="start" dominant-baseline="central" class="lt">3/16" weep hole in M2b at its lowest</text>
+<text x="675.6" y="170.2" text-anchor="start" dominant-baseline="central" class="lt">corner, 3/8" above M4, clear of the fillet</text>
+<circle cx="198.0" cy="194.7" r="2.4" class="dot"/>
+<polyline points="198.0,194.7 633.6,99.0 645.6,99.0" class="ldr" fill="none"/>
+<circle cx="658.6" cy="99.0" r="12.5" class="bub"/>
+<text x="658.6" y="99.0" text-anchor="middle" dominant-baseline="central" class="bt">F</text>
+<text x="675.6" y="99.0" text-anchor="start" dominant-baseline="central" class="lt">self-adhered flashing under M4</text>
+<text x="13.2" y="23.8" text-anchor="start" class="dt">level cut 58.57° off square</text>
+<text x="13.2" y="36.8" text-anchor="start" class="sm">HOLD: verify to the pier as set</text></svg></div><figcaption>Where the stringer's level cut lands on M4.</figcaption></figure><figure class="big"><div class="scroll"><svg viewBox="0 0 588 217" width="588" height="217" role="img" aria-label="M4 field angles, exaggerated" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="bfcc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="bfwd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="bfst" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="bfgr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><rect x="14.0" y="154.0" width="224.0" height="35.0" rx="0" fill="url(#bfcc)" class=" ob"/>
+<polygon points="21.0,154.0 231.0,139.3 231.0,135.8 21.0,150.5" class="steel ob"/>
+<line x1="21.0" y1="150.5" x2="245.0" y2="150.5" class="cl"/>
+<path d="M 189.0 150.5 A 168.0 168.0 0 0 0 188.6 138.8" class="dl" fill="none"/>
+<text x="196.0" y="132.3" text-anchor="start" class="sm">pitch</text>
+<polygon points="49.0,148.5 231.0,37.3 231.0,95.3 156.1,141.1" class="hidp"/>
+<text x="182.0" y="63.0" text-anchor="middle" class="sm">stringer</text>
+<text x="126.0" y="207.2" text-anchor="middle" class="sm">Pitch: side view along the stair</text>
+<rect x="322.0" y="154.0" width="238.0" height="35.0" rx="0" fill="url(#bfcc)" class=" ob"/>
+<polygon points="329.0,154.0 553.0,138.3 553.0,134.8 329.0,150.5" class="steel ob"/>
+<line x1="329.0" y1="150.5" x2="567.0" y2="150.5" class="cl"/>
+<path d="M 511.0 150.5 A 182.0 182.0 0 0 0 510.6 137.8" class="dl" fill="none"/>
+<text x="511.0" y="130.2" text-anchor="start" class="sm">cross slope</text>
+<rect x="427.0" y="49.0" width="28.0" height="92.7" rx="0" class="hidp"/>
+<polygon points="427.0,143.6 427.0,141.7 455.0,141.7" class="holdf"/>
+<text x="441.0" y="38.5" text-anchor="middle" class="sm">stringer end</text>
+<text x="402.5" y="119.0" text-anchor="end" class="sm">gap = bevel</text>
+<text x="441.0" y="207.2" text-anchor="middle" class="sm">Cross slope: end view across the stair</text></svg></div><figcaption>The two angles to measure on M4 as set on the pier. M4 is not shimmed.</figcaption></figure><h3>Field measurements</h3><div class="scroll"><table class="grid checks"><thead><tr><th>Measure in the field</th><th>Design</th><th>How</th><th>Recorded</th></tr></thead><tbody><tr><td>Total rise, M4 top to top of wall</td><td>47-5/8"</td><td>Laser or water level at the stringer centreline</td><td><span class="blank"></span></td></tr><tr><td>Run, first riser line to wall face</td><td>78-3/4"</td><td>Tape along the stair centreline string</td><td><span class="blank"></span></td></tr><tr><td>M4 pitch along the stair</td><td>0.0°</td><td>Digital angle gauge on M4, along its length</td><td><span class="blank"></span></td></tr><tr><td>M4 cross slope across the stair</td><td>0.0°</td><td>Digital angle gauge on M4, across its width</td><td><span class="blank"></span></td></tr><tr><td>Rod positions from the first riser line</td><td>3/4 and 5-1/4, 5-1/4 apart</td><td>Tape from the riser line</td><td><span class="blank"></span></td></tr></tbody></table></div><div class="scroll"><table class="grid"><thead><tr><th>Measured</th><th>Goes into the M1 cut as</th></tr></thead><tbody><tr><td>Total rise or run</td><td>Riser height, stringer slope, both cut angles, M1 length and every stub mark</td></tr><tr><td>Pitch</td><td>The level cut angle is the design angle plus the measured pitch</td></tr><tr><td>Cross slope</td><td>The level cut becomes compound: a bevel across the 4 in width equal to the measured cross slope</td></tr></tbody></table></div><h3>Checks</h3><div class="scroll"><table class="grid checks"><thead><tr><th>Check</th><th>Target</th><th>Measured</th></tr></thead><tbody><tr><td>Size</td><td>12 × 30 ± 1/16</td><td><span class="blank"></span></td></tr><tr><td>Rod holes</td><td>9/16, on the rods as set</td><td><span class="blank"></span></td></tr></tbody></table></div><p class="note">Set M4 first and measure it before M1 is cut. M4 is not shimmed: every measured angle goes into the M1 level cut, however small. Send the recorded values; U-M1 updates to the as-built angles.</p></div></article><article class="sheet" id="sU-M6"><header class="tb"><div class="num">U-M6</div><div class="ttl"><h2>M6 Wall plate</h2><p>Upper stairs</p></div></header><div class="body"><p class="qty"><b>Quantity:</b> 1</p><h3>Material</h3><div class="scroll"><table class="grid"><thead><tr><th>Stock</th><th>Grade</th><th>Cut</th><th>Total for this flight</th></tr></thead><tbody><tr><td>PL 1/2</td><td>A36</td><td>12 × 16</td><td>1 pc</td></tr></tbody></table></div><h3>Hardware</h3><div class="scroll"><table class="grid"><thead><tr><th>Mark</th><th>Qty</th><th>Item</th></tr></thead><tbody><tr><td>A1</td><td>6</td><td>1/2 type 316 threaded rod anchors in SET-3G, 9/16 hole, 3-1/2 to 4-1/2 embed, nut and washer</td></tr></tbody></table></div><h3>Fabrication detail</h3><figure class="big"><div class="scroll"><svg viewBox="0 0 336 308" width="336" height="308" role="img" aria-label="Wall plate face" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="wfcc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="wfwd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="wfst" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="wfgr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><rect x="0.0" y="0.0" width="336.0" height="308.0" rx="0" fill="url(#wfcc)" class=" none"/>
+<rect x="84.0" y="42.0" width="168.0" height="224.0" rx="0" class="steel ob"/>
+<rect x="140.0" y="60.4" width="56.0" height="131.3" rx="0" fill="url(#wfst)" class=" ob"/>
+<circle cx="105.0" cy="98.0" r="7.0" class="nut"/>
+<circle cx="105.0" cy="98.0" r="3.9" class="rodc"/>
+<circle cx="105.0" cy="168.0" r="7.0" class="nut"/>
+<circle cx="105.0" cy="168.0" r="3.9" class="rodc"/>
+<circle cx="105.0" cy="238.0" r="7.0" class="nut"/>
+<circle cx="105.0" cy="238.0" r="3.9" class="rodc"/>
+<circle cx="231.0" cy="98.0" r="7.0" class="nut"/>
+<circle cx="231.0" cy="98.0" r="3.9" class="rodc"/>
+<circle cx="231.0" cy="168.0" r="7.0" class="nut"/>
+<circle cx="231.0" cy="168.0" r="3.9" class="rodc"/>
+<circle cx="231.0" cy="238.0" r="7.0" class="nut"/>
+<circle cx="231.0" cy="238.0" r="3.9" class="rodc"/>
+<line x1="84.0" y1="39.0" x2="84.0" y2="17.4" class="ext"/>
+<line x1="252.0" y1="39.0" x2="252.0" y2="17.4" class="ext"/>
+<line x1="84.0" y1="22.4" x2="252.0" y2="22.4" class="dl"/>
+<line x1="80.8" y1="25.6" x2="87.2" y2="19.2" class="tick"/>
+<line x1="248.8" y1="25.6" x2="255.2" y2="19.2" class="tick"/>
+<text x="168.0" y="15.4" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 168.0 15.4)">12"</text>
+<line x1="105.0" y1="269.0" x2="105.0" y2="290.6" class="ext"/>
+<line x1="231.0" y1="269.0" x2="231.0" y2="290.6" class="ext"/>
+<line x1="105.0" y1="285.6" x2="231.0" y2="285.6" class="dl"/>
+<line x1="101.8" y1="288.8" x2="108.2" y2="282.4" class="tick"/>
+<line x1="227.8" y1="288.8" x2="234.2" y2="282.4" class="tick"/>
+<text x="168.0" y="292.6" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 168.0 292.6)">9" anchors</text>
+<line x1="255.0" y1="98.0" x2="276.6" y2="98.0" class="ext"/>
+<line x1="255.0" y1="168.0" x2="276.6" y2="168.0" class="ext"/>
+<line x1="271.6" y1="98.0" x2="271.6" y2="168.0" class="dl"/>
+<line x1="268.4" y1="94.8" x2="274.8" y2="101.2" class="tick"/>
+<line x1="268.4" y1="164.8" x2="274.8" y2="171.2" class="tick"/>
+<text x="278.6" y="133.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(90.00 278.6 133.0)">5"</text>
+<line x1="81.0" y1="266.0" x2="59.4" y2="266.0" class="ext"/>
+<line x1="81.0" y1="42.0" x2="59.4" y2="42.0" class="ext"/>
+<line x1="64.4" y1="266.0" x2="64.4" y2="42.0" class="dl"/>
+<line x1="67.6" y1="269.2" x2="61.2" y2="262.8" class="tick"/>
+<line x1="67.6" y1="45.2" x2="61.2" y2="38.8" class="tick"/>
+<text x="57.4" y="154.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 57.4 154.0)">16"</text>
+<text x="168.0" y="130.0" text-anchor="middle" class="sm">tube</text></svg></div><figcaption>Anchor pattern. Scan the wall and set the pattern between the verticals.</figcaption></figure><figure class="big"><div class="scroll"><svg viewBox="0 0 611 442" width="611" height="442" role="img" aria-label="Wall connection" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="wdcc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="wdwd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="wdst" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="wdgr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><rect x="386.8" y="76.4" width="156.0" height="365.6" rx="0" fill="url(#wdcc)" class=" ob"/>
+<line x1="542.8" y1="76.4" x2="611.0" y2="76.4" class="grade"/>
+<polygon points="143.0,287.1 380.2,142.1 380.2,264.0 143.0,409.0" class="steel ob"/>
+<line x1="143.0" y1="276.7" x2="143.0" y2="419.4" class="brk"/>
+<rect x="94.2" y="188.5" width="146.2" height="19.5" rx="0" class="steel ob"/>
+<rect x="94.2" y="165.8" width="71.5" height="22.8" rx="0" fill="url(#wdwd)" class=" ob"/>
+<rect x="168.2" y="165.8" width="72.3" height="22.8" rx="0" fill="url(#wdwd)" class=" ob"/>
+<rect x="126.8" y="188.5" width="81.2" height="4.9" rx="0" class="hid"/>
+<rect x="126.8" y="193.4" width="81.2" height="14.6" rx="0" class="hid"/>
+<polygon points="128.4,208.0 206.4,208.0 206.4,248.4 128.4,296.0" class="steel ob"/>
+<rect x="128.4" y="194.2" width="78.0" height="13.8" rx="0" class="hid"/>
+<rect x="240.5" y="99.1" width="146.2" height="19.5" rx="0" class="steel ob"/>
+<rect x="240.5" y="76.4" width="71.5" height="22.8" rx="0" fill="url(#wdwd)" class=" ob"/>
+<rect x="314.4" y="76.4" width="72.3" height="22.8" rx="0" fill="url(#wdwd)" class=" ob"/>
+<rect x="273.0" y="99.1" width="81.2" height="4.9" rx="0" class="hid"/>
+<rect x="273.0" y="104.0" width="81.2" height="14.6" rx="0" class="hid"/>
+<polygon points="274.6,118.6 352.6,118.6 352.6,159.0 274.6,206.6" class="steel ob"/>
+<rect x="274.6" y="104.8" width="78.0" height="13.8" rx="0" class="hid"/>
+<rect x="0" y="0" width="143.0" height="442" class="paper"/>
+<rect x="380.2" y="125.0" width="6.5" height="208.0" rx="0" class="steel ob"/>
+<line x1="375.0" y1="177.0" x2="458.2" y2="177.0" class="rod"/>
+<line x1="375.0" y1="242.0" x2="458.2" y2="242.0" class="rod"/>
+<line x1="375.0" y1="307.0" x2="458.2" y2="307.0" class="rod"/>
+<rect x="375.7" y="170.5" width="4.5" height="13.0" rx="0" class="nut"/>
+<rect x="375.7" y="235.5" width="4.5" height="13.0" rx="0" class="nut"/>
+<rect x="375.7" y="300.5" width="4.5" height="13.0" rx="0" class="nut"/>
+<circle cx="341.2" cy="276.1" r="2.5" class="void ob"/>
+<line x1="539.8" y1="76.4" x2="517.0" y2="76.4" class="ext"/>
+<line x1="539.8" y1="177.0" x2="517.0" y2="177.0" class="ext"/>
+<line x1="522.0" y1="76.4" x2="522.0" y2="177.0" class="dl"/>
+<line x1="518.8" y1="73.2" x2="525.1" y2="79.6" class="tick"/>
+<line x1="518.8" y1="173.9" x2="525.1" y2="180.2" class="tick"/>
+<text x="515.0" y="126.7" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(90.00 515.0 126.7)">7-3/4"</text>
+<line x1="539.8" y1="177.0" x2="517.0" y2="177.0" class="ext"/>
+<line x1="539.8" y1="307.0" x2="517.0" y2="307.0" class="ext"/>
+<line x1="522.0" y1="177.0" x2="522.0" y2="307.0" class="dl"/>
+<line x1="518.8" y1="173.9" x2="525.1" y2="180.2" class="tick"/>
+<line x1="518.8" y1="303.9" x2="525.1" y2="310.2" class="tick"/>
+<text x="515.0" y="242.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(90.00 515.0 242.0)">10"</text>
+<line x1="377.2" y1="264.0" x2="357.1" y2="264.0" class="ext"/>
+<line x1="377.2" y1="142.1" x2="357.1" y2="142.1" class="ext"/>
+<line x1="362.1" y1="264.0" x2="362.1" y2="142.1" class="dl"/>
+<line x1="365.2" y1="267.2" x2="358.9" y2="260.8" class="tick"/>
+<line x1="365.2" y1="145.3" x2="358.9" y2="138.9" class="tick"/>
+<text x="355.1" y="203.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 355.1 203.0)">9-3/8" plumb cut</text>
+<line x1="383.2" y1="118.6" x2="424.2" y2="118.6" class="ext"/>
+<line x1="383.2" y1="125.0" x2="424.2" y2="125.0" class="ext"/>
+<line x1="419.2" y1="118.6" x2="419.2" y2="125.0" class="dl"/>
+<line x1="416.1" y1="115.4" x2="422.4" y2="121.8" class="tick"/>
+<line x1="416.1" y1="121.9" x2="422.4" y2="128.2" class="tick"/>
+<text x="426.2" y="121.8" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(90.00 426.2 121.8)">1/2" clear</text>
+<circle cx="383.5" cy="313.5" r="2.4" class="dot"/>
+<polyline points="383.5,313.5 221.0,390.0 233.0,390.0" class="ldr" fill="none"/>
+<circle cx="246.0" cy="390.0" r="12.5" class="bub"/>
+<text x="246.0" y="390.0" text-anchor="middle" dominant-baseline="central" class="bt">M6</text>
+<text x="263.0" y="390.0" text-anchor="start" dominant-baseline="central" class="lt">1/2×12×16 wall PL</text>
+<circle cx="313.6" cy="73.8" r="2.4" class="dot"/>
+<polyline points="313.6,73.8 221.0,344.5 233.0,344.5" class="ldr" fill="none"/>
+<circle cx="246.0" cy="344.5" r="12.5" class="bub"/>
+<text x="246.0" y="344.5" text-anchor="middle" dominant-baseline="central" class="bt">G</text>
+<text x="263.0" y="344.5" text-anchor="start" dominant-baseline="central" class="lt">guard post stem on the landing tread frame</text>
+<circle cx="438.8" cy="242.0" r="2.4" class="dot"/>
+<polyline points="438.8,242.0 299.0,26.0 287.0,26.0" class="ldr" fill="none"/>
+<circle cx="274.0" cy="26.0" r="12.5" class="bub"/>
+<text x="274.0" y="26.0" text-anchor="middle" dominant-baseline="central" class="bt">A1</text>
+<text x="257.0" y="19.5" text-anchor="end" dominant-baseline="central" class="lt">1/2" SS all-thread in SET-3G, 9/16 hole</text>
+<text x="257.0" y="32.5" text-anchor="end" dominant-baseline="central" class="lt">3-1/2 to 4-1/2 embed, locate between bars</text>
+<text x="13.0" y="84.5" text-anchor="start" class="dt">plumb cut 31.43° off square</text>
+<text x="13.0" y="97.5" text-anchor="start" class="sm">HOLD: verify to the wall as built</text>
+<text x="464.8" y="70.4" text-anchor="middle" class="sm">T.O. wall</text></svg></div><figcaption>Where the stringer's plumb cut meets M6.</figcaption></figure><figure class="big"><div class="scroll"><svg viewBox="0 0 563 250" width="563" height="250" role="img" aria-label="M6 field angles, exaggerated" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="wfcc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="wfwd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="wfst" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="wfgr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><polygon points="192.0,230.4 243.2,230.4 243.2,12.8 176.8,12.8" fill="url(#wfcc)" class=" ob"/>
+<line x1="192.0" y1="230.4" x2="192.0" y2="6.4" class="cl"/>
+<path d="M 192.0 38.4 A 192.0 192.0 0 0 0 178.6 38.9" class="dl" fill="none"/>
+<text x="163.2" y="25.6" text-anchor="end" class="sm">lean</text>
+<polygon points="184.3,166.4 177.2,64.0 180.4,64.0 187.5,166.4" class="steel ob"/>
+<polygon points="178.6,83.8 37.8,169.9 42.0,230.0 182.8,144.0" class="hidp"/>
+<text x="76.8" y="128.0" text-anchor="middle" class="sm">stringer</text>
+<text x="128.0" y="243.2" text-anchor="middle" class="sm">Lean: side view along the stair</text>
+<polygon points="480.8,230.4 524.8,230.4 524.8,25.6 466.4,25.6" fill="url(#wfcc)" class=" ob"/>
+<line x1="473.6" y1="230.4" x2="473.6" y2="19.2" class="cl"/>
+<line x1="320.0" y1="128.0" x2="486.4" y2="128.0" class="cl"/>
+<rect x="332.8" y="115.2" width="139.9" height="25.6" rx="0" class="hidp"/>
+<polygon points="472.7,140.8 474.5,140.8 472.7,115.2" class="holdf"/>
+<path d="M 473.6 51.2 A 179.2 179.2 0 0 0 486.1 51.6" class="dl" fill="none"/>
+<text x="492.8" y="70.4" text-anchor="start" class="sm">plan angle</text>
+<text x="384.0" y="105.6" text-anchor="middle" class="sm">stringer</text>
+<text x="435.2" y="243.2" text-anchor="middle" class="sm">Plan angle: looking down</text></svg></div><figcaption>The two angles to measure on the wall face where M6 goes.</figcaption></figure><h3>Field measurements</h3><div class="scroll"><table class="grid checks"><thead><tr><th>Measure in the field</th><th>Design</th><th>How</th><th>Recorded</th></tr></thead><tbody><tr><td>Wall face lean at M6, positive toward the stair</td><td>0.0°</td><td>Digital angle gauge on a straightedge held to the face</td><td><span class="blank"></span></td></tr><tr><td>Wall face angle to the stair centreline, in plan</td><td>90.0°</td><td>Framing square off the stair centreline string</td><td><span class="blank"></span></td></tr><tr><td>Top of wall to top of M6</td><td>3-3/4"</td><td>Tape down the face</td><td><span class="blank"></span></td></tr><tr><td>Wall stem thickness at M6</td><td>6</td><td>Tape across the wall top</td><td><span class="blank"></span></td></tr></tbody></table></div><div class="scroll"><table class="grid"><thead><tr><th>Measured</th><th>Goes into the M1 cut as</th></tr></thead><tbody><tr><td>Lean</td><td>The plumb cut angle is the design angle plus the measured lean</td></tr><tr><td>Plan angle off 90°</td><td>The plumb cut becomes compound: a bevel across the 4 in width equal to the measured error</td></tr><tr><td>Stem thinner than 6</td><td>Anchor embedment and edge distance change; call before drilling</td></tr></tbody></table></div><h3>Checks</h3><div class="scroll"><table class="grid checks"><thead><tr><th>Check</th><th>Target</th><th>Measured</th></tr></thead><tbody><tr><td>Size</td><td>12 × 16 ± 1/16</td><td><span class="blank"></span></td></tr><tr><td>Hole pattern</td><td>± 1/16</td><td><span class="blank"></span></td></tr></tbody></table></div><p class="note">Measure the wall before M1 is cut. M6 welds to the plumb cut, so every measured angle goes into that cut, however small.</p></div></article><article class="sheet" id="sU-M1"><header class="tb"><div class="num">U-M1</div><div class="ttl"><h2>M1 Mono stringer</h2><p>Upper stairs</p></div></header><div class="body"><p class="qty"><b>Quantity:</b> 1</p><h3>Material</h3><div class="scroll"><table class="grid"><thead><tr><th>Stock</th><th>Grade</th><th>Cut</th><th>Total for this flight</th></tr></thead><tbody><tr><td>HSS 8×4×1/4</td><td>A500 Gr C</td><td>81-5/8" long point</td><td>1 pc, about 83-5/8"</td></tr></tbody></table></div><h3>Hardware</h3><p class="note">None on this part.</p><h3>Fabrication detail</h3><figure class="big"><div class="scroll"><svg viewBox="0 0 1023 319" width="1023" height="319" role="img" aria-label="Stringer cut and layout" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="sccc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="scwd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="scst" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="scgr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><polygon points="55.0,126.5 953.0,126.5 899.2,214.5 199.0,214.5" class="steel ob"/>
+<line x1="123.1" y1="126.5" x2="123.1" y2="77.0" class="cl"/>
+<rect x="123.1" y="122.7" width="77.3" height="3.8" rx="0" class="hid"/>
+<circle cx="127.9" cy="126.5" r="1.3" class="void ob"/>
+<line x1="268.1" y1="126.5" x2="268.1" y2="77.0" class="cl"/>
+<rect x="268.1" y="122.7" width="77.3" height="3.8" rx="0" class="hid"/>
+<circle cx="273.0" cy="126.5" r="1.3" class="void ob"/>
+<line x1="413.2" y1="126.5" x2="413.2" y2="77.0" class="cl"/>
+<rect x="413.2" y="122.7" width="77.3" height="3.8" rx="0" class="hid"/>
+<circle cx="418.0" cy="126.5" r="1.3" class="void ob"/>
+<line x1="558.2" y1="126.5" x2="558.2" y2="77.0" class="cl"/>
+<rect x="558.2" y="122.7" width="77.3" height="3.8" rx="0" class="hid"/>
+<circle cx="563.0" cy="126.5" r="1.3" class="void ob"/>
+<line x1="703.2" y1="126.5" x2="703.2" y2="77.0" class="cl"/>
+<rect x="703.2" y="122.7" width="77.3" height="3.8" rx="0" class="hid"/>
+<circle cx="708.0" cy="126.5" r="1.3" class="void ob"/>
+<line x1="848.3" y1="126.5" x2="848.3" y2="77.0" class="cl"/>
+<rect x="848.3" y="122.7" width="77.3" height="3.8" rx="0" class="hid"/>
+<circle cx="853.1" cy="126.5" r="1.3" class="void ob"/>
+<line x1="55.0" y1="123.5" x2="55.0" y2="17.0" class="ext"/>
+<line x1="953.0" y1="123.5" x2="953.0" y2="17.0" class="ext"/>
+<line x1="55.0" y1="22.0" x2="953.0" y2="22.0" class="dl"/>
+<line x1="51.8" y1="25.2" x2="58.2" y2="18.8" class="tick"/>
+<line x1="949.8" y1="25.2" x2="956.2" y2="18.8" class="tick"/>
+<text x="504.0" y="15.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 504.0 15.0)">81-5/8" long point (top face)</text>
+<line x1="199.0" y1="217.5" x2="199.0" y2="258.0" class="ext"/>
+<line x1="899.2" y1="217.5" x2="899.2" y2="258.0" class="ext"/>
+<line x1="199.0" y1="253.0" x2="899.2" y2="253.0" class="dl"/>
+<line x1="195.8" y1="256.2" x2="202.2" y2="249.8" class="tick"/>
+<line x1="896.0" y1="256.2" x2="902.4" y2="249.8" class="tick"/>
+<text x="549.1" y="260.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 549.1 260.0)">63-11/16" short point (bottom face)</text>
+<line x1="55.0" y1="123.5" x2="55.0" y2="72.0" class="ext"/>
+<line x1="123.1" y1="123.5" x2="123.1" y2="72.0" class="ext"/>
+<line x1="55.0" y1="77.0" x2="123.1" y2="77.0" class="dl"/>
+<line x1="51.8" y1="80.2" x2="58.2" y2="73.8" class="tick"/>
+<line x1="119.9" y1="80.2" x2="126.3" y2="73.8" class="tick"/>
+<text x="89.1" y="70.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 89.1 70.0)">6-3/16"</text>
+<line x1="123.1" y1="123.5" x2="123.1" y2="72.0" class="ext"/>
+<line x1="268.1" y1="123.5" x2="268.1" y2="72.0" class="ext"/>
+<line x1="123.1" y1="77.0" x2="268.1" y2="77.0" class="dl"/>
+<line x1="119.9" y1="80.2" x2="126.3" y2="73.8" class="tick"/>
+<line x1="265.0" y1="80.2" x2="271.3" y2="73.8" class="tick"/>
+<text x="195.6" y="70.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 195.6 70.0)">13-3/16"</text>
+<line x1="268.1" y1="123.5" x2="268.1" y2="72.0" class="ext"/>
+<line x1="413.2" y1="123.5" x2="413.2" y2="72.0" class="ext"/>
+<line x1="268.1" y1="77.0" x2="413.2" y2="77.0" class="dl"/>
+<line x1="265.0" y1="80.2" x2="271.3" y2="73.8" class="tick"/>
+<line x1="410.0" y1="80.2" x2="416.4" y2="73.8" class="tick"/>
+<text x="340.7" y="70.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 340.7 70.0)">13-3/16"</text>
+<line x1="413.2" y1="123.5" x2="413.2" y2="72.0" class="ext"/>
+<line x1="558.2" y1="123.5" x2="558.2" y2="72.0" class="ext"/>
+<line x1="413.2" y1="77.0" x2="558.2" y2="77.0" class="dl"/>
+<line x1="410.0" y1="80.2" x2="416.4" y2="73.8" class="tick"/>
+<line x1="555.0" y1="80.2" x2="561.4" y2="73.8" class="tick"/>
+<text x="485.7" y="70.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 485.7 70.0)">13-3/16"</text>
+<line x1="558.2" y1="123.5" x2="558.2" y2="72.0" class="ext"/>
+<line x1="703.2" y1="123.5" x2="703.2" y2="72.0" class="ext"/>
+<line x1="558.2" y1="77.0" x2="703.2" y2="77.0" class="dl"/>
+<line x1="555.0" y1="80.2" x2="561.4" y2="73.8" class="tick"/>
+<line x1="700.1" y1="80.2" x2="706.4" y2="73.8" class="tick"/>
+<text x="630.7" y="70.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 630.7 70.0)">13-3/16"</text>
+<line x1="703.2" y1="123.5" x2="703.2" y2="72.0" class="ext"/>
+<line x1="848.3" y1="123.5" x2="848.3" y2="72.0" class="ext"/>
+<line x1="703.2" y1="77.0" x2="848.3" y2="77.0" class="dl"/>
+<line x1="700.1" y1="80.2" x2="706.4" y2="73.8" class="tick"/>
+<line x1="845.1" y1="80.2" x2="851.4" y2="73.8" class="tick"/>
+<text x="775.7" y="70.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 775.7 70.0)">13-3/16"</text>
+<text x="105.0" y="170.5" text-anchor="middle" class="sm" transform="rotate(31.43 105.0 170.5)">LEVEL cut</text>
+<text x="951.4" y="170.5" text-anchor="middle" class="sm" transform="rotate(-58.57 951.4 170.5)">PLUMB cut</text>
+<text x="55.0" y="283.8" text-anchor="start" class="nt">Bottom: level cut, 58.57° off square.</text>
+<text x="55.0" y="296.8" text-anchor="start" class="nt">Top: plumb cut, 31.43° off square.</text>
+<text x="539.0" y="283.8" text-anchor="start" class="nt">Marks are the downhill face of each stub, measured along the top face</text>
+<text x="539.0" y="296.8" text-anchor="start" class="nt">from the long point. 3/16" hole just inside each stub's downhill wall.</text></svg></div><figcaption>Level cut at the bottom, plumb cut at the top. Stub centrelines along the top face from the long point. A 3/16 hole under each stub, centred 1-3/8 downhill of its centreline so its edge is flush with the inside of the stub's downhill wall; drill before the stubs go on. A 3/16 weep notch in the bottom edge at the lowest corner on M4, as set, left open. No other vents.</figcaption></figure><h3>Checks</h3><div class="scroll"><table class="grid checks"><thead><tr><th>Check</th><th>Target</th><th>Measured</th></tr></thead><tbody><tr><td>Long point, top face</td><td>81-5/8" ± 1/16</td><td><span class="blank"></span></td></tr><tr><td>Short point, bottom face</td><td>63-11/16" ± 1/16</td><td><span class="blank"></span></td></tr><tr><td>Each stub centreline from the long point</td><td>per detail ± 1/16</td><td><span class="blank"></span></td></tr><tr><td>3/16 hole under each stub, 1-3/8 downhill of its centreline</td><td>6</td><td><span class="blank"></span></td></tr><tr><td>3/16 weep notch at the lowest corner on M4</td><td>1, cut after the field measurements</td><td><span class="blank"></span></td></tr></tbody></table></div><p class="note">Cut angles shown are the design values. Before cutting, apply the field measurements recorded on U-M4 and U-M6. Tape the stub holes and the weep notch while blasting; pull the tape before coating. Total rise is taken as 48-1/8" <span class="hold">HOLD</span>.</p></div></article><article class="sheet" id="sU-M2a"><header class="tb"><div class="num">U-M2a</div><div class="ttl"><h2>M2a Stubs</h2><p>Upper stairs</p></div></header><div class="body"><p class="qty"><b>Quantity:</b> 6</p><h3>Material</h3><div class="scroll"><table class="grid"><thead><tr><th>Stock</th><th>Grade</th><th>Cut</th><th>Total for this flight</th></tr></thead><tbody><tr><td>HSS 6×4×1/4</td><td>A500 Gr C</td><td>7-13/16" long face</td><td>about 48 in</td></tr></tbody></table></div><h3>Hardware</h3><div class="scroll"><table class="grid"><thead><tr><th>Mark</th><th>Qty</th><th>Item</th></tr></thead><tbody><tr><td>H1</td><td>2 per stub</td><td>3/8 through bolts; 13/32 holes drilled at dry fit through the collars and stub together</td></tr></tbody></table></div><h3>Fabrication detail</h3><figure class="big"><div class="scroll"><svg viewBox="0 0 462 235" width="462" height="235" role="img" aria-label="Stub cut" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="sbcc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="sbwd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="sbst" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="sbgr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><polygon points="165.0,202.4 297.0,121.7 297.0,30.1 165.0,30.1" class="steel ob"/>
+<line x1="165.0" y1="202.4" x2="352.0" y2="202.4" class="thin"/>
+<path d="M 220.0 202.4 A 55 55 0 0 0 211.9 173.7" class="dl" fill="none"/>
+<text x="225.0" y="198.4" text-anchor="start" class="dt">31.43°</text>
+<line x1="162.0" y1="30.1" x2="131.4" y2="30.1" class="ext"/>
+<line x1="162.0" y1="202.4" x2="131.4" y2="202.4" class="ext"/>
+<line x1="136.4" y1="30.1" x2="136.4" y2="202.4" class="dl"/>
+<line x1="133.2" y1="26.9" x2="139.6" y2="33.2" class="tick"/>
+<line x1="133.2" y1="199.2" x2="139.6" y2="205.6" class="tick"/>
+<text x="129.4" y="116.2" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(90.00 129.4 116.2)">7-13/16" long</text>
+<line x1="300.0" y1="121.7" x2="330.6" y2="121.7" class="ext"/>
+<line x1="300.0" y1="30.1" x2="330.6" y2="30.1" class="ext"/>
+<line x1="325.6" y1="121.7" x2="325.6" y2="30.1" class="dl"/>
+<line x1="328.8" y1="124.9" x2="322.4" y2="118.6" class="tick"/>
+<line x1="328.8" y1="33.2" x2="322.4" y2="26.9" class="tick"/>
+<text x="332.6" y="75.9" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 332.6 75.9)">4-3/16" short</text>
+<line x1="165.0" y1="27.1" x2="165.0" y2="3.1" class="ext"/>
+<line x1="297.0" y1="27.1" x2="297.0" y2="3.1" class="ext"/>
+<line x1="165.0" y1="8.1" x2="297.0" y2="8.1" class="dl"/>
+<line x1="161.8" y1="11.2" x2="168.2" y2="4.9" class="tick"/>
+<line x1="293.8" y1="11.2" x2="300.2" y2="4.9" class="tick"/>
+<text x="231.0" y="1.1" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 231.0 1.1)">6"</text>
+<text x="79.2" y="136.4" text-anchor="middle" class="sm">downhill</text>
+<text x="387.2" y="92.4" text-anchor="middle" class="sm">uphill</text></svg></div><figcaption>One 31.43° cut at the stringer end, square on top, long face downhill. No drain; the stub drains through the 3/16 hole in M1.</figcaption></figure><h3>Checks</h3><div class="scroll"><table class="grid checks"><thead><tr><th>Check</th><th>Target</th><th>Measured</th></tr></thead><tbody><tr><td>Long face</td><td>7-13/16" ± 1/32 <span class="hold">HOLD</span></td><td><span class="blank"></span></td></tr><tr><td>Short face</td><td>4-3/16" ± 1/32 <span class="hold">HOLD</span></td><td><span class="blank"></span></td></tr><tr><td>Cut angle</td><td>31.43° <span class="hold">HOLD</span></td><td><span class="blank"></span></td></tr><tr><td>Top square both ways</td><td>within 1/32</td><td><span class="blank"></span></td></tr></tbody></table></div><p class="note"><span class="hold">HOLD</span> Triple-check the 31.43° cut before cutting any stub. It equals the stringer's slope, which comes from the total rise and run recorded on U-M4 and U-M6 once the plates are set and checked. If either changes, the angle and both face lengths change with it, and this page updates.</p></div></article><article class="sheet" id="sU-M2b"><header class="tb"><div class="num">U-M2b</div><div class="ttl"><h2>M2b Stub, tread 1</h2><p>Upper stairs</p></div></header><div class="body"><p class="qty"><b>Quantity:</b> 1</p><h3>Material</h3><div class="scroll"><table class="grid"><thead><tr><th>Stock</th><th>Grade</th><th>Cut</th><th>Total for this flight</th></tr></thead><tbody><tr><td>HSS 6×4×1/4</td><td>A500 Gr C</td><td>4-3/16</td><td>4-3/16 in</td></tr></tbody></table></div><h3>Hardware</h3><div class="scroll"><table class="grid"><thead><tr><th>Mark</th><th>Qty</th><th>Item</th></tr></thead><tbody><tr><td>H1</td><td>2</td><td>3/8 through bolts; 13/32 holes drilled at dry fit through the collars and stub together</td></tr></tbody></table></div><h3>Fabrication detail</h3><figure class="big"><div class="scroll"><svg viewBox="0 0 1536 361" width="1536" height="361" role="img" aria-label="M2b, side face" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="br40cc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="br40wd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="br40st" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="br40gr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><rect x="96.0" y="57.6" width="192.0" height="198.0" rx="0" class="steel ob"/>
+<circle cx="117.6" cy="237.6" r="4.5" class="void ob"/>
+<line x1="96.0" y1="258.6" x2="96.0" y2="318.2" class="ext"/>
+<line x1="288.0" y1="258.6" x2="288.0" y2="318.2" class="ext"/>
+<line x1="96.0" y1="313.2" x2="288.0" y2="313.2" class="dl"/>
+<line x1="92.8" y1="316.4" x2="99.2" y2="310.0" class="tick"/>
+<line x1="284.8" y1="316.4" x2="291.2" y2="310.0" class="tick"/>
+<text x="192.0" y="320.2" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 192.0 320.2)">4"</text>
+<line x1="291.0" y1="255.6" x2="350.6" y2="255.6" class="ext"/>
+<line x1="291.0" y1="57.6" x2="350.6" y2="57.6" class="ext"/>
+<line x1="345.6" y1="255.6" x2="345.6" y2="57.6" class="dl"/>
+<line x1="348.8" y1="258.8" x2="342.4" y2="252.4" class="tick"/>
+<line x1="348.8" y1="60.8" x2="342.4" y2="54.4" class="tick"/>
+<text x="352.6" y="156.6" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 352.6 156.6)">4-1/8"</text>
+<circle cx="117.6" cy="237.6" r="2.4" class="dot"/>
+<polyline points="117.6,237.6 384.0,57.6 396.0,57.6" class="ldr" fill="none"/>
+<circle cx="409.0" cy="57.6" r="12.5" class="bub"/>
+<text x="409.0" y="57.6" text-anchor="middle" dominant-baseline="central" class="bt">1</text>
+<text x="426.0" y="57.6" text-anchor="start" dominant-baseline="central" class="lt">3/16 weep hole at the lowest corner, 3/8 above M4</text>
+<circle cx="192.0" cy="63.6" r="2.4" class="dot"/>
+<polyline points="192.0,63.6 384.0,110.4 396.0,110.4" class="ldr" fill="none"/>
+<circle cx="409.0" cy="110.4" r="12.5" class="bub"/>
+<text x="409.0" y="110.4" text-anchor="middle" dominant-baseline="central" class="bt">2</text>
+<text x="426.0" y="110.4" text-anchor="start" dominant-baseline="central" class="lt">Open top, square cut</text></svg></div><figcaption>Square both ends. Stands on M4, centred on tread 1. The weep hole goes in whichever side wall sits lowest on M4 as set, centred 3/8 up so it clears the 1/4 fillet.</figcaption></figure><h3>Checks</h3><div class="scroll"><table class="grid checks"><thead><tr><th>Check</th><th>Target</th><th>Measured</th></tr></thead><tbody><tr><td>Length</td><td>4-3/16 ± 1/32</td><td><span class="blank"></span></td></tr><tr><td>Ends square</td><td>within 1/32</td><td><span class="blank"></span></td></tr><tr><td>Weep hole</td><td>3/16, at the lowest corner, 3/8 above M4</td><td><span class="blank"></span></td></tr></tbody></table></div></div></article><article class="sheet" id="sU-M7"><header class="tb"><div class="num">U-M7</div><div class="ttl"><h2>M7 Tread frame assembly</h2><p>Upper stairs</p></div></header><div class="body"><p class="qty"><b>Quantity:</b> 7</p><h3>Material</h3><div class="scroll"><table class="grid"><thead><tr><th>Stock</th><th>Grade</th><th>Cut</th><th>Total for this flight</th></tr></thead><tbody><tr><td>See F1, F2, F3, M8, M3, P1</td><td></td><td></td><td></td></tr></tbody></table></div><h3>Hardware</h3><p class="note">None on this part.</p><h3>Fabrication detail</h3><figure class="big"><div class="scroll"><svg viewBox="0 0 1100 319" width="1100" height="319" role="img" aria-label="M7 tread frame, plan from above" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="tfpcc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="tfpwd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="tfpst" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="tfpgr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><polygon points="44.0,192.5 572.0,192.5 544.5,165.0 71.5,165.0" class="steel ob"/>
+<polygon points="44.0,68.8 572.0,68.8 544.5,96.2 71.5,96.2" class="steel ob"/>
+<polygon points="44.0,192.5 71.5,165.0 71.5,96.2 44.0,68.8" class="steel ob"/>
+<polygon points="572.0,192.5 544.5,165.0 544.5,96.2 572.0,68.8" class="steel ob"/>
+<rect x="162.2" y="96.2" width="16.5" height="68.8" rx="0" class="steel ob"/>
+<rect x="437.2" y="96.2" width="16.5" height="68.8" rx="0" class="steel ob"/>
+<rect x="281.2" y="96.2" width="4.1" height="68.8" rx="0" class="steel ob"/>
+<rect x="330.7" y="96.2" width="4.1" height="68.8" rx="0" class="steel ob"/>
+<rect x="286.0" y="96.2" width="44.0" height="68.8" rx="0" class="steel ob"/>
+<rect x="286.0" y="97.6" width="44.0" height="66.0" rx="0" class="hidc"/>
+<circle cx="110.0" cy="176.0" r="1.5" class="redc"/>
+<circle cx="110.0" cy="85.2" r="1.5" class="redc"/>
+<circle cx="242.0" cy="176.0" r="1.5" class="redc"/>
+<circle cx="242.0" cy="85.2" r="1.5" class="redc"/>
+<circle cx="374.0" cy="176.0" r="1.5" class="redc"/>
+<circle cx="374.0" cy="85.2" r="1.5" class="redc"/>
+<circle cx="506.0" cy="176.0" r="1.5" class="redc"/>
+<circle cx="506.0" cy="85.2" r="1.5" class="redc"/>
+<circle cx="60.5" cy="162.2" r="1.5" class="redc"/>
+<circle cx="60.5" cy="99.7" r="1.5" class="redc"/>
+<circle cx="555.5" cy="162.2" r="1.5" class="redc"/>
+<circle cx="555.5" cy="99.7" r="1.5" class="redc"/>
+<circle cx="170.5" cy="145.8" r="1.5" class="redc"/>
+<circle cx="170.5" cy="115.5" r="1.5" class="redc"/>
+<circle cx="445.5" cy="145.8" r="1.5" class="redc"/>
+<circle cx="445.5" cy="115.5" r="1.5" class="redc"/>
+<circle cx="60.5" cy="182.6" r="1.6" class="void ob"/>
+<circle cx="555.5" cy="182.6" r="1.6" class="void ob"/>
+<rect x="541.8" y="116.9" width="27.5" height="27.5" rx="0" class="hid"/>
+<line x1="0.0" y1="130.6" x2="616.0" y2="130.6" class="cl"/>
+<line x1="308.0" y1="225.5" x2="308.0" y2="35.8" class="cl"/>
+<line x1="44.0" y1="65.8" x2="44.0" y2="28.5" class="ext"/>
+<line x1="572.0" y1="65.8" x2="572.0" y2="28.5" class="ext"/>
+<line x1="44.0" y1="33.5" x2="572.0" y2="33.5" class="dl"/>
+<line x1="40.8" y1="36.7" x2="47.2" y2="30.4" class="tick"/>
+<line x1="568.8" y1="36.7" x2="575.2" y2="30.4" class="tick"/>
+<text x="308.0" y="26.5" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 308.0 26.5)">48" overall</text>
+<line x1="308.0" y1="65.8" x2="308.0" y2="48.4" class="ext"/>
+<line x1="334.8" y1="65.8" x2="334.8" y2="48.4" class="ext"/>
+<line x1="308.0" y1="53.4" x2="334.8" y2="53.4" class="dl"/>
+<line x1="304.8" y1="56.5" x2="311.2" y2="50.2" class="tick"/>
+<line x1="331.6" y1="56.5" x2="338.0" y2="50.2" class="tick"/>
+<text x="321.4" y="46.4" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 321.4 46.4)">2-7/16</text>
+<line x1="334.8" y1="65.8" x2="334.8" y2="48.4" class="ext"/>
+<line x1="445.5" y1="65.8" x2="445.5" y2="48.4" class="ext"/>
+<line x1="334.8" y1="53.4" x2="445.5" y2="53.4" class="dl"/>
+<line x1="331.6" y1="56.5" x2="338.0" y2="50.2" class="tick"/>
+<line x1="442.3" y1="56.5" x2="448.7" y2="50.2" class="tick"/>
+<text x="390.2" y="46.4" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 390.2 46.4)">10-1/16</text>
+<line x1="445.5" y1="65.8" x2="445.5" y2="48.4" class="ext"/>
+<line x1="539.0" y1="65.8" x2="539.0" y2="48.4" class="ext"/>
+<line x1="445.5" y1="53.4" x2="539.0" y2="53.4" class="dl"/>
+<line x1="442.3" y1="56.5" x2="448.7" y2="50.2" class="tick"/>
+<line x1="535.8" y1="56.5" x2="542.2" y2="50.2" class="tick"/>
+<text x="492.2" y="46.4" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 492.2 46.4)">8-1/2</text>
+<line x1="575.0" y1="192.5" x2="605.6" y2="192.5" class="ext"/>
+<line x1="575.0" y1="68.8" x2="605.6" y2="68.8" class="ext"/>
+<line x1="600.6" y1="192.5" x2="600.6" y2="68.8" class="dl"/>
+<line x1="603.8" y1="195.7" x2="597.4" y2="189.3" class="tick"/>
+<line x1="603.8" y1="71.9" x2="597.4" y2="65.6" class="tick"/>
+<text x="607.6" y="130.6" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 607.6 130.6)">11-1/4"</text>
+<line x1="575.0" y1="192.5" x2="590.2" y2="192.5" class="ext"/>
+<line x1="575.0" y1="159.5" x2="590.2" y2="159.5" class="ext"/>
+<line x1="585.2" y1="192.5" x2="585.2" y2="159.5" class="dl"/>
+<line x1="588.4" y1="195.7" x2="582.0" y2="189.3" class="tick"/>
+<line x1="588.4" y1="162.7" x2="582.0" y2="156.3" class="tick"/>
+<text x="592.2" y="176.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 592.2 176.0)">3</text>
+<line x1="286.0" y1="195.5" x2="286.0" y2="215.1" class="ext"/>
+<line x1="330.0" y1="195.5" x2="330.0" y2="215.1" class="ext"/>
+<line x1="286.0" y1="210.1" x2="330.0" y2="210.1" class="dl"/>
+<line x1="282.8" y1="213.3" x2="289.2" y2="206.9" class="tick"/>
+<line x1="326.8" y1="213.3" x2="333.2" y2="206.9" class="tick"/>
+<text x="308.0" y="217.1" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 308.0 217.1)">4 plate</text>
+<line x1="308.0" y1="195.5" x2="308.0" y2="237.1" class="ext"/>
+<line x1="374.0" y1="195.5" x2="374.0" y2="237.1" class="ext"/>
+<line x1="308.0" y1="232.1" x2="374.0" y2="232.1" class="dl"/>
+<line x1="304.8" y1="235.3" x2="311.2" y2="228.9" class="tick"/>
+<line x1="370.8" y1="235.3" x2="377.2" y2="228.9" class="tick"/>
+<text x="341.0" y="239.1" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 341.0 239.1)">6</text>
+<line x1="374.0" y1="195.5" x2="374.0" y2="237.1" class="ext"/>
+<line x1="506.0" y1="195.5" x2="506.0" y2="237.1" class="ext"/>
+<line x1="374.0" y1="232.1" x2="506.0" y2="232.1" class="dl"/>
+<line x1="370.8" y1="235.3" x2="377.2" y2="228.9" class="tick"/>
+<line x1="502.8" y1="235.3" x2="509.2" y2="228.9" class="tick"/>
+<text x="440.0" y="239.1" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 440.0 239.1)">12</text>
+<circle cx="198.0" cy="176.0" r="2.4" class="dot"/>
+<polyline points="198.0,176.0 638.0,260.7 650.0,260.7" class="ldr" fill="none"/>
+<circle cx="663.0" cy="260.7" r="12.5" class="bub"/>
+<text x="663.0" y="260.7" text-anchor="middle" dominant-baseline="central" class="bt">1</text>
+<text x="680.0" y="254.2" text-anchor="start" dominant-baseline="central" class="lt">HSS 2-1/2×1-1/2×3/16 laid flat, mitred corners.</text>
+<text x="680.0" y="267.2" text-anchor="start" dominant-baseline="central" class="lt">Post treads: 3×1-1/2×3/16 end members, unequal miter</text>
+<circle cx="445.5" cy="132.0" r="2.4" class="dot"/>
+<polyline points="445.5,132.0 638.0,214.5 650.0,214.5" class="ldr" fill="none"/>
+<circle cx="663.0" cy="214.5" r="12.5" class="bub"/>
+<text x="663.0" y="214.5" text-anchor="middle" dominant-baseline="central" class="bt">2</text>
+<text x="680.0" y="214.5" text-anchor="start" dominant-baseline="central" class="lt">HSS 1-1/2×1-1/2×1/8 joists at ±12-1/2</text>
+<circle cx="313.5" cy="105.6" r="2.4" class="dot"/>
+<polyline points="313.5,105.6 638.0,181.5 650.0,181.5" class="ldr" fill="none"/>
+<circle cx="663.0" cy="181.5" r="12.5" class="bub"/>
+<text x="663.0" y="181.5" text-anchor="middle" dominant-baseline="central" class="bt">3</text>
+<text x="680.0" y="181.5" text-anchor="start" dominant-baseline="central" class="lt">M3 plate, 3/8 × 4 × 6-1/4 bar, between the collars</text>
+<circle cx="332.8" cy="148.5" r="2.4" class="dot"/>
+<polyline points="332.8,148.5 638.0,148.5 650.0,148.5" class="ldr" fill="none"/>
+<circle cx="663.0" cy="148.5" r="12.5" class="bub"/>
+<text x="663.0" y="148.5" text-anchor="middle" dominant-baseline="central" class="bt">4</text>
+<text x="680.0" y="148.5" text-anchor="start" dominant-baseline="central" class="lt">M8 collars, 3/8 × 1-1/2 × 6-1/4 bar, 1/16 weld gap to the plate</text>
+<circle cx="308.0" cy="107.5" r="2.4" class="dot"/>
+<polyline points="308.0,107.5 638.0,108.9 650.0,108.9" class="ldr" fill="none"/>
+<circle cx="663.0" cy="108.9" r="12.5" class="bub"/>
+<text x="663.0" y="108.9" text-anchor="middle" dominant-baseline="central" class="bt">5</text>
+<text x="680.0" y="102.4" text-anchor="start" dominant-baseline="central" class="lt">M3 caps the stub; the frame drains at the two</text>
+<text x="680.0" y="115.4" text-anchor="start" dominant-baseline="central" class="lt">underside corners, the stub drains into the stringer</text>
+<circle cx="60.5" cy="182.6" r="2.4" class="dot"/>
+<polyline points="60.5,182.6 638.0,291.5 650.0,291.5" class="ldr" fill="none"/>
+<circle cx="663.0" cy="291.5" r="12.5" class="bub"/>
+<text x="663.0" y="291.5" text-anchor="middle" dominant-baseline="central" class="bt">6</text>
+<text x="680.0" y="291.5" text-anchor="start" dominant-baseline="central" class="lt">3/16 frame drain at two corners, underside</text>
+<circle cx="555.5" cy="130.6" r="2.4" class="dot"/>
+<polyline points="555.5,130.6 638.0,64.9 650.0,64.9" class="ldr" fill="none"/>
+<circle cx="663.0" cy="64.9" r="12.5" class="bub"/>
+<text x="663.0" y="64.9" text-anchor="middle" dominant-baseline="central" class="bt">7</text>
+<text x="680.0" y="64.9" text-anchor="start" dominant-baseline="central" class="lt">Post treads only: 2-1/2 stem, 7 tall</text>
+<circle cx="506.0" cy="85.2" r="2.4" class="dot"/>
+<polyline points="506.0,85.2 638.0,31.9 650.0,31.9" class="ldr" fill="none"/>
+<circle cx="663.0" cy="31.9" r="12.5" class="bub"/>
+<text x="663.0" y="31.9" text-anchor="middle" dominant-baseline="central" class="bt">8</text>
+<text x="680.0" y="31.9" text-anchor="start" dominant-baseline="central" class="lt">7/32 holes through both walls: plank screws and coating vents</text></svg></div><figcaption>Seven identical frames. Treads 1 and 4 carry P1 stems at mid-length; the landing tread carries them at its front end, for the post at the nosing.</figcaption></figure><figure class="big"><div class="scroll"><svg viewBox="0 0 1100 160" width="1100" height="160" role="img" aria-label="M7 section across, at the stub" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="tfscc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="tfswd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="tfsst" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="tfsgr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><rect x="44.0" y="55.0" width="33.0" height="16.5" rx="0" class="steel ob"/>
+<rect x="46.1" y="57.1" width="28.9" height="12.4" rx="0" class="void"/>
+<rect x="539.0" y="55.0" width="33.0" height="16.5" rx="0" class="steel ob"/>
+<rect x="541.1" y="57.1" width="28.9" height="12.4" rx="0" class="void"/>
+<rect x="162.2" y="55.0" width="16.5" height="16.5" rx="0" class="steel ob"/>
+<rect x="163.6" y="56.4" width="13.8" height="13.8" rx="0" class="void"/>
+<rect x="437.2" y="55.0" width="16.5" height="16.5" rx="0" class="steel ob"/>
+<rect x="438.6" y="56.4" width="13.8" height="13.8" rx="0" class="void"/>
+<rect x="281.2" y="55.0" width="4.1" height="16.5" rx="0" class="steel ob"/>
+<rect x="330.7" y="55.0" width="4.1" height="16.5" rx="0" class="steel ob"/>
+<rect x="286.0" y="55.0" width="44.0" height="4.1" rx="0" class="steel ob"/>
+<rect x="286.0" y="60.5" width="44.0" height="49.5" rx="0" class="hid"/>
+<rect x="286.0" y="59.1" width="44.0" height="1.4" rx="0" class="pad"/>
+<line x1="276.1" y1="66.0" x2="339.9" y2="66.0" class="rod"/>
+<rect x="541.8" y="22.0" width="27.5" height="33.0" rx="0" class="steel ob"/>
+<line x1="0.0" y1="71.5" x2="616.0" y2="71.5" class="thin"/>
+<line x1="575.0" y1="71.5" x2="590.2" y2="71.5" class="ext"/>
+<line x1="575.0" y1="55.0" x2="590.2" y2="55.0" class="ext"/>
+<line x1="585.2" y1="71.5" x2="585.2" y2="55.0" class="dl"/>
+<line x1="588.4" y1="74.7" x2="582.0" y2="68.3" class="tick"/>
+<line x1="588.4" y1="58.2" x2="582.0" y2="51.8" class="tick"/>
+<text x="592.2" y="63.2" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 592.2 63.2)">1-1/2</text>
+<line x1="281.2" y1="113.0" x2="281.2" y2="126.0" class="ext"/>
+<line x1="334.8" y1="113.0" x2="334.8" y2="126.0" class="ext"/>
+<line x1="281.2" y1="121.0" x2="334.8" y2="121.0" class="dl"/>
+<line x1="278.0" y1="124.2" x2="284.4" y2="117.8" class="tick"/>
+<line x1="331.6" y1="124.2" x2="338.0" y2="117.8" class="tick"/>
+<text x="308.0" y="128.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 308.0 128.0)">4-7/8 over the collars</text>
+<circle cx="332.8" cy="61.6" r="2.4" class="dot"/>
+<polyline points="332.8,61.6 638.0,33.0 650.0,33.0" class="ldr" fill="none"/>
+<circle cx="663.0" cy="33.0" r="12.5" class="bub"/>
+<text x="663.0" y="33.0" text-anchor="middle" dominant-baseline="central" class="bt">4</text>
+<text x="680.0" y="33.0" text-anchor="start" dominant-baseline="central" class="lt">Collars, full frame depth; plate welded between, flush</text>
+<circle cx="339.9" cy="66.0" r="2.4" class="dot"/>
+<polyline points="339.9,66.0 638.0,60.5 650.0,60.5" class="ldr" fill="none"/>
+<circle cx="663.0" cy="60.5" r="12.5" class="bub"/>
+<text x="663.0" y="60.5" text-anchor="middle" dominant-baseline="central" class="bt">8</text>
+<text x="680.0" y="60.5" text-anchor="start" dominant-baseline="central" class="lt">(2) 3/8 through bolts, 4 apart, both collars and the stub</text>
+<circle cx="308.0" cy="93.5" r="2.4" class="dot"/>
+<polyline points="308.0,93.5 638.0,93.5 650.0,93.5" class="ldr" fill="none"/>
+<circle cx="663.0" cy="93.5" r="12.5" class="bub"/>
+<text x="663.0" y="93.5" text-anchor="middle" dominant-baseline="central" class="bt">9</text>
+<text x="680.0" y="93.5" text-anchor="start" dominant-baseline="central" class="lt">Stub rises 1 in between the collars, 1/16 neoprene pad on top</text>
+<circle cx="555.5" cy="33.0" r="2.4" class="dot"/>
+<polyline points="555.5,33.0 638.0,132.0 650.0,132.0" class="ldr" fill="none"/>
+<circle cx="663.0" cy="132.0" r="12.5" class="bub"/>
+<text x="663.0" y="132.0" text-anchor="middle" dominant-baseline="central" class="bt">7</text>
+<text x="680.0" y="132.0" text-anchor="start" dominant-baseline="central" class="lt">Stem to the end tube, 1/4 fillet all around</text></svg></div><figcaption>Section at the stub.</figcaption></figure><figure class="big"><div class="scroll"><svg viewBox="0 0 1170 345" width="1170" height="345" role="img" aria-label="Centre connection, front elevation, enlarged" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="tcdcc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="tcdwd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="tcdst" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="tcdgr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><rect x="0.0" y="105.0" width="540.0" height="45.0" rx="0" class="steel ob"/>
+<rect x="0.0" y="52.5" width="540.0" height="52.5" rx="0" fill="url(#tcdwd)" class=" ob"/>
+<rect x="196.9" y="105.0" width="11.2" height="45.0" rx="0" class="hid"/>
+<rect x="331.9" y="105.0" width="11.2" height="45.0" rx="0" class="hid"/>
+<rect x="210.0" y="105.0" width="120.0" height="11.2" rx="0" class="hid"/>
+<rect x="210.0" y="120.0" width="120.0" height="30.0" rx="0" class="hid"/>
+<rect x="210.0" y="116.2" width="120.0" height="3.8" rx="0" class="pad"/>
+<line x1="183.0" y1="135.0" x2="357.0" y2="135.0" class="hidp"/>
+<rect x="210.0" y="150.0" width="120.0" height="195.0" rx="0" class="steel ob"/>
+<line x1="270.0" y1="345.0" x2="270.0" y2="15.0" class="cl"/>
+<line x1="196.9" y1="153.0" x2="196.9" y2="191.0" class="ext"/>
+<line x1="343.1" y1="153.0" x2="343.1" y2="191.0" class="ext"/>
+<line x1="196.9" y1="186.0" x2="343.1" y2="186.0" class="dl"/>
+<line x1="193.7" y1="189.2" x2="200.1" y2="182.8" class="tick"/>
+<line x1="339.9" y1="189.2" x2="346.3" y2="182.8" class="tick"/>
+<text x="270.0" y="193.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 270.0 193.0)">4-7/8 over the collars</text>
+<line x1="210.0" y1="237.0" x2="210.0" y2="235.0" class="ext"/>
+<line x1="330.0" y1="237.0" x2="330.0" y2="235.0" class="ext"/>
+<line x1="210.0" y1="240.0" x2="330.0" y2="240.0" class="dl"/>
+<line x1="206.8" y1="243.2" x2="213.2" y2="236.8" class="tick"/>
+<line x1="326.8" y1="243.2" x2="333.2" y2="236.8" class="tick"/>
+<text x="270.0" y="233.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 270.0 233.0)">4 stub across</text>
+<line x1="208.1" y1="138.0" x2="208.1" y2="112.0" class="ext"/>
+<line x1="210.0" y1="138.0" x2="210.0" y2="112.0" class="ext"/>
+<line x1="208.1" y1="117.0" x2="210.0" y2="117.0" class="dl"/>
+<line x1="204.9" y1="120.2" x2="211.3" y2="113.8" class="tick"/>
+<line x1="206.8" y1="120.2" x2="213.2" y2="113.8" class="tick"/>
+<text x="209.1" y="110.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 209.1 110.0)">1/16</text>
+<line x1="147.0" y1="116.2" x2="115.0" y2="116.2" class="ext"/>
+<line x1="147.0" y1="105.0" x2="115.0" y2="105.0" class="ext"/>
+<line x1="120.0" y1="116.2" x2="120.0" y2="105.0" class="dl"/>
+<line x1="123.2" y1="119.4" x2="116.8" y2="113.1" class="tick"/>
+<line x1="123.2" y1="108.2" x2="116.8" y2="101.8" class="tick"/>
+<text x="113.0" y="110.6" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 113.0 110.6)">3/8</text>
+<line x1="111.0" y1="150.0" x2="85.0" y2="150.0" class="ext"/>
+<line x1="111.0" y1="120.0" x2="85.0" y2="120.0" class="ext"/>
+<line x1="90.0" y1="150.0" x2="90.0" y2="120.0" class="dl"/>
+<line x1="93.2" y1="153.2" x2="86.8" y2="146.8" class="tick"/>
+<line x1="93.2" y1="123.2" x2="86.8" y2="116.8" class="tick"/>
+<text x="83.0" y="135.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 83.0 135.0)">1 in</text>
+<line x1="543.0" y1="150.0" x2="575.0" y2="150.0" class="ext"/>
+<line x1="543.0" y1="105.0" x2="575.0" y2="105.0" class="ext"/>
+<line x1="570.0" y1="150.0" x2="570.0" y2="105.0" class="dl"/>
+<line x1="573.2" y1="153.2" x2="566.8" y2="146.8" class="tick"/>
+<line x1="573.2" y1="108.2" x2="566.8" y2="101.8" class="tick"/>
+<text x="577.0" y="127.5" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 577.0 127.5)">1-1/2</text>
+<line x1="543.0" y1="105.0" x2="575.0" y2="105.0" class="ext"/>
+<line x1="543.0" y1="52.5" x2="575.0" y2="52.5" class="ext"/>
+<line x1="570.0" y1="105.0" x2="570.0" y2="52.5" class="dl"/>
+<line x1="573.2" y1="108.2" x2="566.8" y2="101.8" class="tick"/>
+<line x1="573.2" y1="55.7" x2="566.8" y2="49.3" class="tick"/>
+<text x="577.0" y="78.8" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 577.0 78.8)">1-3/4</text>
+<circle cx="300.0" cy="111.0" r="2.4" class="dot"/>
+<polyline points="300.0,111.0 630.0,24.0 642.0,24.0" class="ldr" fill="none"/>
+<circle cx="655.0" cy="24.0" r="12.5" class="bub"/>
+<text x="655.0" y="24.0" text-anchor="middle" dominant-baseline="central" class="bt">M3</text>
+<text x="672.0" y="24.0" text-anchor="start" dominant-baseline="central" class="lt">Plate, 3/8 × 4 bar, flush with the frame top</text>
+<circle cx="337.5" cy="141.0" r="2.4" class="dot"/>
+<polyline points="337.5,141.0 630.0,78.0 642.0,78.0" class="ldr" fill="none"/>
+<circle cx="655.0" cy="78.0" r="12.5" class="bub"/>
+<text x="655.0" y="78.0" text-anchor="middle" dominant-baseline="central" class="bt">M8</text>
+<text x="672.0" y="78.0" text-anchor="start" dominant-baseline="central" class="lt">Collars, 3/8 × 1-1/2 bar, full frame depth</text>
+<circle cx="351.0" cy="135.0" r="2.4" class="dot"/>
+<polyline points="351.0,135.0 630.0,132.0 642.0,132.0" class="ldr" fill="none"/>
+<circle cx="655.0" cy="132.0" r="12.5" class="bub"/>
+<text x="655.0" y="132.0" text-anchor="middle" dominant-baseline="central" class="bt">H1</text>
+<text x="672.0" y="132.0" text-anchor="start" dominant-baseline="central" class="lt">Through bolts, 4 apart, both collars and the stub</text>
+<circle cx="270.0" cy="118.2" r="2.4" class="dot"/>
+<polyline points="270.0,118.2 630.0,240.0 642.0,240.0" class="ldr" fill="none"/>
+<circle cx="655.0" cy="240.0" r="12.5" class="bub"/>
+<text x="655.0" y="240.0" text-anchor="middle" dominant-baseline="central" class="bt">H2</text>
+<text x="672.0" y="240.0" text-anchor="start" dominant-baseline="central" class="lt">EPDM pad on the open stub top</text>
+<circle cx="327.0" cy="285.0" r="2.4" class="dot"/>
+<polyline points="327.0,285.0 630.0,294.0 642.0,294.0" class="ldr" fill="none"/>
+<circle cx="655.0" cy="294.0" r="12.5" class="bub"/>
+<text x="655.0" y="294.0" text-anchor="middle" dominant-baseline="central" class="bt">M2</text>
+<text x="672.0" y="294.0" text-anchor="start" dominant-baseline="central" class="lt">Stub, 6 in the run; only this shows below the frame</text></svg></div><figcaption>How the frame drops over its stub.</figcaption></figure><h3>Checks</h3><div class="scroll"><table class="grid checks"><thead><tr><th>Check</th><th>Target</th><th>Measured</th></tr></thead><tbody><tr><td>Diagonals</td><td>equal within 1/16</td><td><span class="blank"></span></td></tr><tr><td>Flat</td><td>within 1/16 over 48</td><td><span class="blank"></span></td></tr><tr><td>Clear between collars</td><td>4-1/8 ± 1/32</td><td><span class="blank"></span></td></tr><tr><td>M3 flush with the frame top</td><td>within 1/32</td><td><span class="blank"></span></td></tr><tr><td>P1 stem centre from frame centreline</td><td>22-1/2 ± 1/16</td><td><span class="blank"></span></td></tr></tbody></table></div></div></article><article class="sheet" id="sU-F1"><header class="tb"><div class="num">U-F1</div><div class="ttl"><h2>F1 Front and back members</h2><p>Upper stairs</p></div></header><div class="body"><p class="qty"><b>Quantity:</b> 14, 2 per frame</p><h3>Material</h3><div class="scroll"><table class="grid"><thead><tr><th>Stock</th><th>Grade</th><th>Cut</th><th>Total for this flight</th></tr></thead><tbody><tr><td>HSS 2-1/2×1-1/2×3/16</td><td>A500 Gr C</td><td>48 long point</td><td>about 56 ft</td></tr></tbody></table></div><h3>Hardware</h3><div class="scroll"><table class="grid"><thead><tr><th>Mark</th><th>Qty</th><th>Item</th></tr></thead><tbody><tr><td>H3</td><td>4 per member</td><td>#10 × 2-3/4 type 316 wood screws, up through the 7/32 holes into the plank</td></tr></tbody></table></div><h3>Fabrication detail</h3><figure class="big"><div class="scroll"><svg viewBox="0 0 560 92" width="560" height="92" role="img" aria-label="F1, plan, laid flat" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="mt48cc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="mt48wd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="mt48st" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="mt48gr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><polygon points="23.0,53.7 391.2,53.7 368.2,30.7 46.0,30.7" class="steel ob"/>
+<circle cx="69.0" cy="42.2" r="0.9" class="nut"/>
+<circle cx="161.1" cy="42.2" r="0.9" class="nut"/>
+<circle cx="253.2" cy="42.2" r="0.9" class="nut"/>
+<circle cx="345.2" cy="42.2" r="0.9" class="nut"/>
+<circle cx="34.5" cy="46.8" r="0.8" class="void ob"/>
+<circle cx="379.7" cy="46.8" r="0.8" class="void ob"/>
+<line x1="23.0" y1="56.7" x2="23.0" y2="74.0" class="ext"/>
+<line x1="391.2" y1="56.7" x2="391.2" y2="74.0" class="ext"/>
+<line x1="23.0" y1="69.0" x2="391.2" y2="69.0" class="dl"/>
+<line x1="19.8" y1="72.2" x2="26.2" y2="65.9" class="tick"/>
+<line x1="388.1" y1="72.2" x2="394.4" y2="65.9" class="tick"/>
+<text x="207.1" y="76.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 207.1 76.0)">48" long point, outside</text>
+<line x1="46.0" y1="27.7" x2="46.0" y2="13.4" class="ext"/>
+<line x1="368.2" y1="27.7" x2="368.2" y2="13.4" class="ext"/>
+<line x1="46.0" y1="18.4" x2="368.2" y2="18.4" class="dl"/>
+<line x1="42.8" y1="21.6" x2="49.2" y2="15.2" class="tick"/>
+<line x1="365.0" y1="21.6" x2="371.4" y2="15.2" class="tick"/>
+<text x="207.1" y="11.4" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 207.1 11.4)">42" short point, inside</text>
+<line x1="394.2" y1="53.7" x2="405.4" y2="53.7" class="ext"/>
+<line x1="394.2" y1="30.7" x2="405.4" y2="30.7" class="ext"/>
+<line x1="400.4" y1="53.7" x2="400.4" y2="30.7" class="dl"/>
+<line x1="403.6" y1="56.9" x2="397.3" y2="50.5" class="tick"/>
+<line x1="403.6" y1="33.9" x2="397.3" y2="27.5" class="tick"/>
+<text x="407.4" y="42.2" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 407.4 42.2)">3"</text>
+<text x="429.6" y="42.2" text-anchor="start" class="sm">45° miter both ends</text></svg></div><figcaption>Laid flat, 3 in wide. Four 7/32 holes on the centreline, 6 and 18 either side of centre, drilled through both walls: plank screws and coating vents. On one member of each pair, a 3/16 drain near each end on the underside.</figcaption></figure><figure class="big"><div class="scroll"><svg viewBox="0 0 792 286" width="792" height="286" role="img" aria-label="F1 end, enlarged" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="me3cc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="me3wd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="me3st" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="me3gr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><polygon points="44.0,209.0 264.0,209.0 198.0,143.0 44.0,143.0" class="steel ob"/>
+<path d="M 229.8 174.8 A 48.4 48.4 0 0 0 215.6 209.0" class="dl" fill="none"/>
+<text x="204.6" y="189.2" text-anchor="middle" class="sm">45°</text>
+<line x1="44.0" y1="212.0" x2="44.0" y2="240.4" class="ext"/>
+<line x1="264.0" y1="212.0" x2="264.0" y2="240.4" class="ext"/>
+<line x1="44.0" y1="235.4" x2="264.0" y2="235.4" class="dl"/>
+<line x1="40.8" y1="238.6" x2="47.2" y2="232.2" class="tick"/>
+<line x1="260.8" y1="238.6" x2="267.2" y2="232.2" class="tick"/>
+<text x="154.0" y="242.4" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 154.0 242.4)">long point, outside edge</text>
+<line x1="198.0" y1="140.0" x2="198.0" y2="116.0" class="ext"/>
+<line x1="264.0" y1="140.0" x2="264.0" y2="116.0" class="ext"/>
+<line x1="198.0" y1="121.0" x2="264.0" y2="121.0" class="dl"/>
+<line x1="194.8" y1="124.2" x2="201.2" y2="117.8" class="tick"/>
+<line x1="260.8" y1="124.2" x2="267.2" y2="117.8" class="tick"/>
+<text x="231.0" y="114.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 231.0 114.0)">3" setback</text>
+<line x1="280.2" y1="209.0" x2="284.4" y2="209.0" class="ext"/>
+<line x1="280.2" y1="143.0" x2="284.4" y2="143.0" class="ext"/>
+<line x1="279.4" y1="209.0" x2="279.4" y2="143.0" class="dl"/>
+<line x1="282.6" y1="212.2" x2="276.2" y2="205.8" class="tick"/>
+<line x1="282.6" y1="146.2" x2="276.2" y2="139.8" class="tick"/>
+<text x="286.4" y="176.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 286.4 176.0)">3"</text>
+<text x="154.0" y="90.2" text-anchor="middle" class="sm">Plan, laid flat: the 45° is across the 3 in face</text>
+<rect x="396.0" y="105.6" width="308.0" height="33.0" rx="0" class="steel ob"/>
+<line x1="720.2" y1="138.6" x2="724.4" y2="138.6" class="ext"/>
+<line x1="720.2" y1="105.6" x2="724.4" y2="105.6" class="ext"/>
+<line x1="719.4" y1="138.6" x2="719.4" y2="105.6" class="dl"/>
+<line x1="722.6" y1="141.8" x2="716.2" y2="135.4" class="tick"/>
+<line x1="722.6" y1="108.8" x2="716.2" y2="102.4" class="tick"/>
+<text x="726.4" y="122.1" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 726.4 122.1)">1-1/2"</text>
+<text x="550.0" y="57.2" text-anchor="middle" class="sm">Side view: the end looks square</text>
+<text x="550.0" y="167.2" text-anchor="middle" class="sm">blade at 45°, cutting down through the 1-1/2</text></svg></div><figcaption>Both ends mitred 45° in plan, mirror images, long point on the outside edge.</figcaption></figure><h3>Checks</h3><div class="scroll"><table class="grid checks"><thead><tr><th>Check</th><th>Target</th><th>Measured</th></tr></thead><tbody><tr><td>Long point</td><td>48 ± 1/32</td><td><span class="blank"></span></td></tr><tr><td>Short point</td><td>42 ± 1/32</td><td><span class="blank"></span></td></tr><tr><td>Miters</td><td>45°, square to the face</td><td><span class="blank"></span></td></tr><tr><td>Screw holes, 6 and 18 from centre</td><td>7/32, ± 1/16</td><td><span class="blank"></span></td></tr></tbody></table></div></div></article><article class="sheet" id="sU-F2"><header class="tb"><div class="num">U-F2</div><div class="ttl"><h2>F2 End members</h2><p>Upper stairs</p></div></header><div class="body"><p class="qty"><b>Quantity:</b> 14, 2 per frame</p><h3>Material</h3><div class="scroll"><table class="grid"><thead><tr><th>Stock</th><th>Grade</th><th>Cut</th><th>Total for this flight</th></tr></thead><tbody><tr><td>HSS 2-1/2×1-1/2×3/16 (plain treads), HSS 3×1-1/2×3/16 (post treads)</td><td>A500 Gr C</td><td>11-1/4 long point</td><td>about 13 ft</td></tr></tbody></table></div><h3>Hardware</h3><div class="scroll"><table class="grid"><thead><tr><th>Mark</th><th>Qty</th><th>Item</th></tr></thead><tbody><tr><td>H3</td><td>2 per member</td><td>#10 × 2-3/4 type 316 wood screws, up through the 7/32 holes into the plank ends</td></tr></tbody></table></div><h3>Fabrication detail</h3><figure class="big"><div class="scroll"><svg viewBox="0 0 560 185" width="560" height="185" role="img" aria-label="F2, plan, laid flat" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="mt11cc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="mt11wd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="mt11st" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="mt11gr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><polygon points="46.3,108.1 220.1,108.1 173.8,61.8 92.7,61.8" class="steel ob"/>
+<circle cx="88.8" cy="85.0" r="1.9" class="nut"/>
+<circle cx="176.7" cy="85.0" r="1.9" class="nut"/>
+<rect x="113.9" y="65.7" width="38.6" height="38.6" rx="0" class="hid"/>
+<line x1="46.3" y1="111.1" x2="46.3" y2="144.0" class="ext"/>
+<line x1="220.1" y1="111.1" x2="220.1" y2="144.0" class="ext"/>
+<line x1="46.3" y1="139.0" x2="220.1" y2="139.0" class="dl"/>
+<line x1="43.2" y1="142.2" x2="49.5" y2="135.9" class="tick"/>
+<line x1="217.0" y1="142.2" x2="223.3" y2="135.9" class="tick"/>
+<text x="133.2" y="146.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 133.2 146.0)">11-1/4" long point, outside</text>
+<line x1="92.7" y1="58.8" x2="92.7" y2="32.1" class="ext"/>
+<line x1="173.8" y1="58.8" x2="173.8" y2="32.1" class="ext"/>
+<line x1="92.7" y1="37.1" x2="173.8" y2="37.1" class="dl"/>
+<line x1="89.5" y1="40.3" x2="95.9" y2="33.9" class="tick"/>
+<line x1="170.6" y1="40.3" x2="177.0" y2="33.9" class="tick"/>
+<text x="133.2" y="30.1" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 133.2 30.1)">5-1/4" short point, inside</text>
+<line x1="223.1" y1="108.1" x2="243.7" y2="108.1" class="ext"/>
+<line x1="223.1" y1="61.8" x2="243.7" y2="61.8" class="ext"/>
+<line x1="238.7" y1="108.1" x2="238.7" y2="61.8" class="dl"/>
+<line x1="241.9" y1="111.3" x2="235.5" y2="105.0" class="tick"/>
+<line x1="241.9" y1="65.0" x2="235.5" y2="58.6" class="tick"/>
+<text x="245.7" y="85.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 245.7 85.0)">3"</text>
+<text x="297.4" y="85.0" text-anchor="start" class="sm">45° miter both ends</text></svg></div><figcaption>Two 7/32 holes on the centreline at the plank centres, through both walls: plank screws and coating vents. Treads 1 and 4: the P1 stem welds at mid-length (dashed), between the holes. Landing tread: the stem sits at the front end, centred 1-1/2 from the front edge, so the front hole is omitted.</figcaption></figure><figure class="big"><div class="scroll"><svg viewBox="0 0 792 286" width="792" height="286" role="img" aria-label="F2 end, enlarged" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="me3cc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="me3wd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="me3st" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="me3gr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><polygon points="44.0,209.0 264.0,209.0 198.0,143.0 44.0,143.0" class="steel ob"/>
+<path d="M 229.8 174.8 A 48.4 48.4 0 0 0 215.6 209.0" class="dl" fill="none"/>
+<text x="204.6" y="189.2" text-anchor="middle" class="sm">45°</text>
+<line x1="44.0" y1="212.0" x2="44.0" y2="240.4" class="ext"/>
+<line x1="264.0" y1="212.0" x2="264.0" y2="240.4" class="ext"/>
+<line x1="44.0" y1="235.4" x2="264.0" y2="235.4" class="dl"/>
+<line x1="40.8" y1="238.6" x2="47.2" y2="232.2" class="tick"/>
+<line x1="260.8" y1="238.6" x2="267.2" y2="232.2" class="tick"/>
+<text x="154.0" y="242.4" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 154.0 242.4)">long point, outside edge</text>
+<line x1="198.0" y1="140.0" x2="198.0" y2="116.0" class="ext"/>
+<line x1="264.0" y1="140.0" x2="264.0" y2="116.0" class="ext"/>
+<line x1="198.0" y1="121.0" x2="264.0" y2="121.0" class="dl"/>
+<line x1="194.8" y1="124.2" x2="201.2" y2="117.8" class="tick"/>
+<line x1="260.8" y1="124.2" x2="267.2" y2="117.8" class="tick"/>
+<text x="231.0" y="114.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 231.0 114.0)">3" setback</text>
+<line x1="280.2" y1="209.0" x2="284.4" y2="209.0" class="ext"/>
+<line x1="280.2" y1="143.0" x2="284.4" y2="143.0" class="ext"/>
+<line x1="279.4" y1="209.0" x2="279.4" y2="143.0" class="dl"/>
+<line x1="282.6" y1="212.2" x2="276.2" y2="205.8" class="tick"/>
+<line x1="282.6" y1="146.2" x2="276.2" y2="139.8" class="tick"/>
+<text x="286.4" y="176.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 286.4 176.0)">3"</text>
+<text x="154.0" y="90.2" text-anchor="middle" class="sm">Plan, laid flat: the 45° is across the 3 in face</text>
+<rect x="396.0" y="105.6" width="308.0" height="33.0" rx="0" class="steel ob"/>
+<line x1="720.2" y1="138.6" x2="724.4" y2="138.6" class="ext"/>
+<line x1="720.2" y1="105.6" x2="724.4" y2="105.6" class="ext"/>
+<line x1="719.4" y1="138.6" x2="719.4" y2="105.6" class="dl"/>
+<line x1="722.6" y1="141.8" x2="716.2" y2="135.4" class="tick"/>
+<line x1="722.6" y1="108.8" x2="716.2" y2="102.4" class="tick"/>
+<text x="726.4" y="122.1" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 726.4 122.1)">1-1/2"</text>
+<text x="550.0" y="57.2" text-anchor="middle" class="sm">Side view: the end looks square</text>
+<text x="550.0" y="167.2" text-anchor="middle" class="sm">blade at 45°, cutting down through the 1-1/2</text></svg></div><figcaption>Both ends mitred 45° in plan, mirror images, long point on the outside edge.</figcaption></figure><h3>Checks</h3><div class="scroll"><table class="grid checks"><thead><tr><th>Check</th><th>Target</th><th>Measured</th></tr></thead><tbody><tr><td>Long point</td><td>11-1/4 ± 1/32</td><td><span class="blank"></span></td></tr><tr><td>Short point</td><td>6-1/4 ± 1/32</td><td><span class="blank"></span></td></tr><tr><td>Screw holes</td><td>7/32, ± 1/16</td><td><span class="blank"></span></td></tr></tbody></table></div></div></article><article class="sheet" id="sU-F3"><header class="tb"><div class="num">U-F3</div><div class="ttl"><h2>F3 Joists</h2><p>Upper stairs</p></div></header><div class="body"><p class="qty"><b>Quantity:</b> 14, 2 per frame</p><h3>Material</h3><div class="scroll"><table class="grid"><thead><tr><th>Stock</th><th>Grade</th><th>Cut</th><th>Total for this flight</th></tr></thead><tbody><tr><td>HSS 1-1/2×1-1/2×1/8</td><td>A500 Gr C</td><td>6-1/4</td><td>about 88 in</td></tr></tbody></table></div><h3>Hardware</h3><div class="scroll"><table class="grid"><thead><tr><th>Mark</th><th>Qty</th><th>Item</th></tr></thead><tbody><tr><td>H3</td><td>2 per joist</td><td>#10 × 2-3/4 type 316 wood screws, one into each plank</td></tr></tbody></table></div><h3>Fabrication detail</h3><figure class="big"><div class="scroll"><svg viewBox="0 0 1596 235" width="1596" height="235" role="img" aria-label="F3, top face" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="br52cc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="br52wd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="br52st" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="br52gr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><rect x="96.0" y="57.6" width="252.0" height="72.0" rx="0" class="steel ob"/>
+<circle cx="156.0" cy="93.6" r="5.3" class="void ob"/>
+<circle cx="288.0" cy="93.6" r="5.3" class="void ob"/>
+<line x1="96.0" y1="132.6" x2="96.0" y2="192.2" class="ext"/>
+<line x1="348.0" y1="132.6" x2="348.0" y2="192.2" class="ext"/>
+<line x1="96.0" y1="187.2" x2="348.0" y2="187.2" class="dl"/>
+<line x1="92.8" y1="190.4" x2="99.2" y2="184.0" class="tick"/>
+<line x1="344.8" y1="190.4" x2="351.2" y2="184.0" class="tick"/>
+<text x="222.0" y="194.2" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 222.0 194.2)">5-1/4"</text>
+<line x1="351.0" y1="129.6" x2="410.6" y2="129.6" class="ext"/>
+<line x1="351.0" y1="57.6" x2="410.6" y2="57.6" class="ext"/>
+<line x1="405.6" y1="129.6" x2="405.6" y2="57.6" class="dl"/>
+<line x1="408.8" y1="132.8" x2="402.4" y2="126.4" class="tick"/>
+<line x1="408.8" y1="60.8" x2="402.4" y2="54.4" class="tick"/>
+<text x="412.6" y="93.6" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 412.6 93.6)">1-1/2"</text>
+<circle cx="156.0" cy="93.6" r="2.4" class="dot"/>
+<polyline points="156.0,93.6 444.0,57.6 456.0,57.6" class="ldr" fill="none"/>
+<circle cx="469.0" cy="57.6" r="12.5" class="bub"/>
+<text x="469.0" y="57.6" text-anchor="middle" dominant-baseline="central" class="bt">1</text>
+<text x="486.0" y="57.6" text-anchor="start" dominant-baseline="central" class="lt">7/32 holes through both walls, 1-1/4 from each end</text></svg></div><figcaption>Square both ends. Fits between the front and back members at ±12-1/2 from the frame centreline. The two holes are the plank screws and the joist's coating vents.</figcaption></figure><h3>Checks</h3><div class="scroll"><table class="grid checks"><thead><tr><th>Check</th><th>Target</th><th>Measured</th></tr></thead><tbody><tr><td>Length</td><td>6-1/4 ± 1/32</td><td><span class="blank"></span></td></tr><tr><td>Ends square</td><td>within 1/32</td><td><span class="blank"></span></td></tr><tr><td>Screw holes</td><td>7/32, 1-1/4 from each end ± 1/16</td><td><span class="blank"></span></td></tr></tbody></table></div></div></article><article class="sheet" id="sU-M8"><header class="tb"><div class="num">U-M8</div><div class="ttl"><h2>M8 Collars and M3 plate</h2><p>Upper stairs</p></div></header><div class="body"><p class="qty"><b>Quantity:</b> Per frame: 2 collars and 1 plate. For the flight: 14 collars, 7 plates</p><h3>Material</h3><div class="scroll"><table class="grid"><thead><tr><th>Stock</th><th>Grade</th><th>Cut</th><th>Total for this flight</th></tr></thead><tbody><tr><td>Flat bar 3/8 × 1-1/2</td><td>A36</td><td>6-1/4, M8 collars</td><td>about 88 in</td></tr><tr><td>Flat bar 3/8 × 4</td><td>A36</td><td>6-1/4, M3 plate</td><td>about 44 in</td></tr></tbody></table></div><h3>Hardware</h3><div class="scroll"><table class="grid"><thead><tr><th>Mark</th><th>Qty</th><th>Item</th></tr></thead><tbody><tr><td>H1</td><td>2 per frame</td><td>3/8-16 × 5-1/2 through bolts with nylocks, through both collars and the stub</td></tr><tr><td>H2</td><td>1 per frame</td><td>1/16 solid neoprene pad, 6 × 4, self-adhesive, on the stub top under the plate</td></tr></tbody></table></div><h3>Fabrication detail</h3><figure class="big"><div class="scroll"><svg viewBox="0 0 858 255" width="858" height="255" role="img" aria-label="M3 plate and M8 collars, plan from below" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="spcc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="spwd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="spst" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="spgr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><rect x="154.0" y="58.8" width="88.0" height="137.5" rx="0" class="steel ob"/>
+<rect x="144.4" y="58.8" width="8.2" height="137.5" rx="0" class="steel ob"/>
+<rect x="243.4" y="58.8" width="8.2" height="137.5" rx="0" class="steel ob"/>
+<rect x="154.0" y="61.6" width="88.0" height="132.0" rx="0" class="hidc"/>
+<line x1="134.2" y1="171.6" x2="261.8" y2="171.6" class="hidp"/>
+<line x1="134.2" y1="83.6" x2="261.8" y2="83.6" class="hidp"/>
+<line x1="22.0" y1="127.6" x2="374.0" y2="127.6" class="cl"/>
+<line x1="154.0" y1="55.8" x2="154.0" y2="27.4" class="ext"/>
+<line x1="242.0" y1="55.8" x2="242.0" y2="27.4" class="ext"/>
+<line x1="154.0" y1="32.4" x2="242.0" y2="32.4" class="dl"/>
+<line x1="150.8" y1="35.6" x2="157.2" y2="29.3" class="tick"/>
+<line x1="238.8" y1="35.6" x2="245.2" y2="29.3" class="tick"/>
+<text x="198.0" y="25.4" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 198.0 25.4)">4 plate</text>
+<line x1="144.4" y1="199.4" x2="144.4" y2="227.8" class="ext"/>
+<line x1="251.6" y1="199.4" x2="251.6" y2="227.8" class="ext"/>
+<line x1="144.4" y1="222.8" x2="251.6" y2="222.8" class="dl"/>
+<line x1="141.2" y1="225.9" x2="147.6" y2="219.6" class="tick"/>
+<line x1="248.4" y1="225.9" x2="254.8" y2="219.6" class="tick"/>
+<text x="198.0" y="229.8" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 198.0 229.8)">4-7/8 over the collars</text>
+<line x1="254.6" y1="196.4" x2="287.4" y2="196.4" class="ext"/>
+<line x1="254.6" y1="58.8" x2="287.4" y2="58.8" class="ext"/>
+<line x1="282.4" y1="196.4" x2="282.4" y2="58.8" class="dl"/>
+<line x1="285.6" y1="199.5" x2="279.2" y2="193.2" class="tick"/>
+<line x1="285.6" y1="62.0" x2="279.2" y2="55.7" class="tick"/>
+<text x="289.4" y="127.6" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 289.4 127.6)">6-1/4"</text>
+<line x1="152.6" y1="55.8" x2="152.6" y2="1.0" class="ext"/>
+<line x1="154.0" y1="55.8" x2="154.0" y2="1.0" class="ext"/>
+<line x1="152.6" y1="6.0" x2="154.0" y2="6.0" class="dl"/>
+<line x1="149.4" y1="9.2" x2="155.8" y2="2.9" class="tick"/>
+<line x1="150.8" y1="9.2" x2="157.2" y2="2.9" class="tick"/>
+<text x="153.3" y="-1.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 153.3 -1.0)">1/16 weld gap</text>
+<line x1="131.2" y1="171.6" x2="109.4" y2="171.6" class="ext"/>
+<line x1="131.2" y1="83.6" x2="109.4" y2="83.6" class="ext"/>
+<line x1="114.4" y1="171.6" x2="114.4" y2="83.6" class="dl"/>
+<line x1="117.6" y1="174.8" x2="111.2" y2="168.4" class="tick"/>
+<line x1="117.6" y1="86.8" x2="111.2" y2="80.4" class="tick"/>
+<text x="107.4" y="127.6" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 107.4 127.6)">4" bolts</text>
+<circle cx="198.0" cy="65.4" r="2.4" class="dot"/>
+<polyline points="198.0,65.4 440.0,41.8 452.0,41.8" class="ldr" fill="none"/>
+<circle cx="465.0" cy="41.8" r="12.5" class="bub"/>
+<text x="465.0" y="41.8" text-anchor="middle" dominant-baseline="central" class="bt">1</text>
+<text x="482.0" y="41.8" text-anchor="start" dominant-baseline="central" class="lt">Plate, 3/8 x 4 flat bar x 6-1/4, flush with the frame top</text>
+<circle cx="148.5" cy="79.2" r="2.4" class="dot"/>
+<polyline points="148.5,79.2 440.0,79.2 452.0,79.2" class="ldr" fill="none"/>
+<circle cx="465.0" cy="79.2" r="12.5" class="bub"/>
+<text x="465.0" y="79.2" text-anchor="middle" dominant-baseline="central" class="bt">2</text>
+<text x="482.0" y="79.2" text-anchor="start" dominant-baseline="central" class="lt">(2) collars, 3/8 x 1-1/2 flat bar x 6-1/4, member to member</text>
+<circle cx="261.8" cy="83.6" r="2.4" class="dot"/>
+<polyline points="261.8,83.6 440.0,116.6 452.0,116.6" class="ldr" fill="none"/>
+<circle cx="465.0" cy="116.6" r="12.5" class="bub"/>
+<text x="465.0" y="116.6" text-anchor="middle" dominant-baseline="central" class="bt">3</text>
+<text x="482.0" y="116.6" text-anchor="start" dominant-baseline="central" class="lt">(2) 3/8 through bolts, 4 apart, left to right</text>
+<circle cx="209.0" cy="154.0" r="2.4" class="dot"/>
+<polyline points="209.0,154.0 440.0,198.0 452.0,198.0" class="ldr" fill="none"/>
+<circle cx="465.0" cy="198.0" r="12.5" class="bub"/>
+<text x="465.0" y="198.0" text-anchor="middle" dominant-baseline="central" class="bt">6</text>
+<text x="482.0" y="198.0" text-anchor="start" dominant-baseline="central" class="lt">Stub below, 6 x 4 (hidden)</text></svg></div><figcaption>Collars and plate from below. The collars run full frame depth between the front and back members; the plate sits between them on 1/16 shims, flush with the frame top, and is welded from the top, full depth, ground flush. That weld is the water seal over the open stub.</figcaption></figure><figure class="big"><div class="scroll"><svg viewBox="0 0 1596 235" width="1596" height="235" role="img" aria-label="M8 collar, face" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="br52cc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="br52wd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="br52st" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="br52gr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><rect x="96.0" y="57.6" width="252.0" height="72.0" rx="0" class="steel ob"/>
+<circle cx="186.0" cy="105.6" r="9.6" class="hidc"/>
+<circle cx="258.0" cy="105.6" r="9.6" class="hidc"/>
+<line x1="96.0" y1="132.6" x2="96.0" y2="192.2" class="ext"/>
+<line x1="348.0" y1="132.6" x2="348.0" y2="192.2" class="ext"/>
+<line x1="96.0" y1="187.2" x2="348.0" y2="187.2" class="dl"/>
+<line x1="92.8" y1="190.4" x2="99.2" y2="184.0" class="tick"/>
+<line x1="344.8" y1="190.4" x2="351.2" y2="184.0" class="tick"/>
+<text x="222.0" y="194.2" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 222.0 194.2)">5-1/4"</text>
+<line x1="351.0" y1="129.6" x2="410.6" y2="129.6" class="ext"/>
+<line x1="351.0" y1="57.6" x2="410.6" y2="57.6" class="ext"/>
+<line x1="405.6" y1="129.6" x2="405.6" y2="57.6" class="dl"/>
+<line x1="408.8" y1="132.8" x2="402.4" y2="126.4" class="tick"/>
+<line x1="408.8" y1="60.8" x2="402.4" y2="54.4" class="tick"/>
+<text x="412.6" y="93.6" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 412.6 93.6)">1-1/2"</text>
+<circle cx="186.0" cy="105.6" r="2.4" class="dot"/>
+<polyline points="186.0,105.6 444.0,57.6 456.0,57.6" class="ldr" fill="none"/>
+<circle cx="469.0" cy="57.6" r="12.5" class="bub"/>
+<text x="469.0" y="57.6" text-anchor="middle" dominant-baseline="central" class="bt">1</text>
+<text x="486.0" y="57.6" text-anchor="start" dominant-baseline="central" class="lt">13/32 through-bolt holes, drilled at dry fit</text></svg></div><figcaption>Both collars identical. The two holes are drilled at dry fit through both collars and the stub together, 4 apart, centred on the collar, 1/2 up. Slotted 13/32 × 9/16 vertically in the collars; round 13/32 in the stub.</figcaption></figure><h3>Checks</h3><div class="scroll"><table class="grid checks"><thead><tr><th>Check</th><th>Target</th><th>Measured</th></tr></thead><tbody><tr><td>Collar length</td><td>6-1/4 ± 1/32</td><td><span class="blank"></span></td></tr><tr><td>Plate length</td><td>6-1/4 ± 1/32</td><td><span class="blank"></span></td></tr><tr><td>Clear between collars</td><td>4-1/8 ± 1/32</td><td><span class="blank"></span></td></tr><tr><td>Plate flush with the frame top</td><td>within 1/32</td><td><span class="blank"></span></td></tr><tr><td>Plate drains, outside the stub footprint</td><td>2 at 3/16</td><td><span class="blank"></span></td></tr><tr><td>Through-bolt holes, after dry fit</td><td>13/32 round in the stub, 13/32 × 9/16 vertical slots in the collars, 4 apart</td><td><span class="blank"></span></td></tr></tbody></table></div></div></article><article class="sheet" id="sU-P1"><header class="tb"><div class="num">U-P1</div><div class="ttl"><h2>P1 Guard stems</h2><p>Upper stairs</p></div></header><div class="body"><p class="qty"><b>Quantity:</b> 6: both F2 end members of treads 1, 4 and the landing</p><h3>Material</h3><div class="scroll"><table class="grid"><thead><tr><th>Stock</th><th>Grade</th><th>Cut</th><th>Total for this flight</th></tr></thead><tbody><tr><td>HSS 2-1/2×2-1/2×3/16</td><td>A500 Gr C</td><td>7</td><td>42 in</td></tr></tbody></table></div><h3>Hardware</h3><div class="scroll"><table class="grid"><thead><tr><th>Mark</th><th>Qty</th><th>Item</th></tr></thead><tbody><tr><td>G</td><td>2 per stem</td><td>3/8 through bolts for the post, in the railing sections</td></tr></tbody></table></div><h3>Fabrication detail</h3><figure class="big"><div class="scroll"><svg viewBox="0 0 900 270" width="900" height="270" role="img" aria-label="P1 placement on the F2 end members, plan, right end of the tread" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="p1plcc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="p1plwd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="p1plst" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="p1plgr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><polygon points="45.0,52.5 165.0,52.5 120.0,97.5 45.0,97.5" class="steel ob"/>
+<polygon points="45.0,221.2 165.0,221.2 120.0,176.2 45.0,176.2" class="steel ob"/>
+<polygon points="165.0,52.5 165.0,221.2 120.0,176.2 120.0,97.5" class="steel ob"/>
+<rect x="123.8" y="118.1" width="37.5" height="37.5" rx="0" class="coral ob"/>
+<line x1="30.0" y1="52.5" x2="195.0" y2="52.5" class="thin"/>
+<text x="105.0" y="33.0" text-anchor="middle" class="sm">front edge, the nose</text>
+<text x="82.5" y="75.0" text-anchor="middle" class="sm">F1</text>
+<text x="142.5" y="201.0" text-anchor="middle" class="sm">F2</text>
+<line x1="161.2" y1="136.9" x2="198.0" y2="136.9" class="thin"/>
+<line x1="198.0" y1="52.5" x2="200.0" y2="52.5" class="ext"/>
+<line x1="198.0" y1="136.9" x2="200.0" y2="136.9" class="ext"/>
+<line x1="195.0" y1="52.5" x2="195.0" y2="136.9" class="dl"/>
+<line x1="191.8" y1="49.3" x2="198.2" y2="55.7" class="tick"/>
+<line x1="191.8" y1="133.7" x2="198.2" y2="140.1" class="tick"/>
+<text x="202.0" y="94.7" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(90.00 202.0 94.7)">5-5/8"</text>
+<line x1="123.8" y1="152.6" x2="123.8" y2="135.6" class="ext"/>
+<line x1="161.2" y1="152.6" x2="161.2" y2="135.6" class="ext"/>
+<line x1="123.8" y1="140.6" x2="161.2" y2="140.6" class="dl"/>
+<line x1="120.6" y1="143.8" x2="126.9" y2="137.4" class="tick"/>
+<line x1="158.1" y1="143.8" x2="164.4" y2="137.4" class="tick"/>
+<text x="142.5" y="133.6" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 142.5 133.6)">2-1/2</text>
+<polygon points="330.0,52.5 450.0,52.5 405.0,97.5 330.0,97.5" class="steel ob"/>
+<polygon points="330.0,221.2 450.0,221.2 405.0,176.2 330.0,176.2" class="steel ob"/>
+<polygon points="450.0,52.5 450.0,221.2 405.0,176.2 405.0,97.5" class="steel ob"/>
+<rect x="408.8" y="56.2" width="37.5" height="37.5" rx="0" class="coral ob"/>
+<rect x="405.0" y="52.5" width="45.0" height="45.0" rx="0" class="hid"/>
+<line x1="315.0" y1="52.5" x2="480.0" y2="52.5" class="thin"/>
+<text x="390.0" y="33.0" text-anchor="middle" class="sm">front edge, the nose</text>
+<text x="367.5" y="75.0" text-anchor="middle" class="sm">F1</text>
+<text x="427.5" y="201.0" text-anchor="middle" class="sm">F2</text>
+<line x1="446.2" y1="75.0" x2="483.0" y2="75.0" class="thin"/>
+<line x1="483.0" y1="52.5" x2="485.0" y2="52.5" class="ext"/>
+<line x1="483.0" y1="75.0" x2="485.0" y2="75.0" class="ext"/>
+<line x1="480.0" y1="52.5" x2="480.0" y2="75.0" class="dl"/>
+<line x1="476.8" y1="49.3" x2="483.2" y2="55.7" class="tick"/>
+<line x1="476.8" y1="71.8" x2="483.2" y2="78.2" class="tick"/>
+<text x="487.0" y="63.8" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(90.00 487.0 63.8)">1-1/2"</text>
+<line x1="408.8" y1="90.8" x2="408.8" y2="73.8" class="ext"/>
+<line x1="446.2" y1="90.8" x2="446.2" y2="73.8" class="ext"/>
+<line x1="408.8" y1="78.8" x2="446.2" y2="78.8" class="dl"/>
+<line x1="405.6" y1="81.9" x2="411.9" y2="75.6" class="tick"/>
+<line x1="443.1" y1="81.9" x2="449.4" y2="75.6" class="tick"/>
+<text x="427.5" y="71.8" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 427.5 71.8)">2-1/2</text>
+<text x="105.0" y="253.5" text-anchor="middle" class="sm">Treads 1 and 4: centred on F2</text>
+<text x="390.0" y="253.5" text-anchor="middle" class="sm">Landing: in line with the nose</text>
+<circle cx="427.5" cy="91.5" r="2.4" class="dot"/>
+<polyline points="427.5,91.5 525.0,127.5 537.0,127.5" class="ldr" fill="none"/>
+<circle cx="550.0" cy="127.5" r="12.5" class="bub"/>
+<text x="550.0" y="127.5" text-anchor="middle" dominant-baseline="central" class="bt">1</text>
+<text x="567.0" y="127.5" text-anchor="start" dominant-baseline="central" class="lt">Post, dashed: front face flush with the nose</text>
+<circle cx="411.0" cy="67.5" r="2.4" class="dot"/>
+<polyline points="411.0,67.5 525.0,165.0 537.0,165.0" class="ldr" fill="none"/>
+<circle cx="550.0" cy="165.0" r="12.5" class="bub"/>
+<text x="550.0" y="165.0" text-anchor="middle" dominant-baseline="central" class="bt">2</text>
+<text x="567.0" y="158.5" text-anchor="start" dominant-baseline="central" class="lt">Stem sits over the F1/F2 miter:</text>
+<text x="567.0" y="171.5" text-anchor="start" dominant-baseline="central" class="lt">grind the miter weld flush first</text></svg></div><figcaption>Dimensions are from the front edge of the tread to the stem centre. Across the tread, every stem is centred on the 3 in end tube, 1/4 in from each side, 22-1/2 from the frame centreline. The left end is the mirror image.</figcaption></figure><figure class="big"><div class="scroll"><svg viewBox="0 0 1220 416" width="1220" height="416" role="img" aria-label="P1, face" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="br25cc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="br25wd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="br25st" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="br25gr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><rect x="80.0" y="48.0" width="100.0" height="280.0" rx="0" class="steel ob"/>
+<circle cx="130.0" cy="228.0" r="8.8" class="void ob"/>
+<circle cx="130.0" cy="98.0" r="8.8" class="void ob"/>
+<circle cx="130.0" cy="312.0" r="3.6" class="void ob"/>
+<line x1="80.0" y1="331.0" x2="80.0" y2="381.0" class="ext"/>
+<line x1="180.0" y1="331.0" x2="180.0" y2="381.0" class="ext"/>
+<line x1="80.0" y1="376.0" x2="180.0" y2="376.0" class="dl"/>
+<line x1="76.8" y1="379.2" x2="83.2" y2="372.8" class="tick"/>
+<line x1="176.8" y1="379.2" x2="183.2" y2="372.8" class="tick"/>
+<text x="130.0" y="383.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 130.0 383.0)">2-1/2"</text>
+<line x1="183.0" y1="328.0" x2="233.0" y2="328.0" class="ext"/>
+<line x1="183.0" y1="48.0" x2="233.0" y2="48.0" class="ext"/>
+<line x1="228.0" y1="328.0" x2="228.0" y2="48.0" class="dl"/>
+<line x1="231.2" y1="331.2" x2="224.8" y2="324.8" class="tick"/>
+<line x1="231.2" y1="51.2" x2="224.8" y2="44.8" class="tick"/>
+<text x="235.0" y="188.0" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 235.0 188.0)">7"</text>
+<circle cx="130.0" cy="98.0" r="2.4" class="dot"/>
+<polyline points="130.0,98.0 260.0,48.0 272.0,48.0" class="ldr" fill="none"/>
+<circle cx="285.0" cy="48.0" r="12.5" class="bub"/>
+<text x="285.0" y="48.0" text-anchor="middle" dominant-baseline="central" class="bt">1</text>
+<text x="302.0" y="48.0" text-anchor="start" dominant-baseline="central" class="lt">7/16 holes, both faces, at 2-1/2 and 5-3/4</text>
+<circle cx="130.0" cy="312.0" r="2.4" class="dot"/>
+<polyline points="130.0,312.0 260.0,92.0 272.0,92.0" class="ldr" fill="none"/>
+<circle cx="285.0" cy="92.0" r="12.5" class="bub"/>
+<text x="285.0" y="92.0" text-anchor="middle" dominant-baseline="central" class="bt">2</text>
+<text x="302.0" y="92.0" text-anchor="start" dominant-baseline="central" class="lt">3/16 drain just above the weld</text></svg></div><figcaption>Square both ends. 1/4 fillet all around to the top of the frame.</figcaption></figure><h3>Checks</h3><div class="scroll"><table class="grid checks"><thead><tr><th>Check</th><th>Target</th><th>Measured</th></tr></thead><tbody><tr><td>Length</td><td>7 ± 1/32</td><td><span class="blank"></span></td></tr><tr><td>Holes</td><td>± 1/32</td><td><span class="blank"></span></td></tr><tr><td>Treads 1 and 4: stem centre from the front edge</td><td>5-5/8 ± 1/16</td><td><span class="blank"></span></td></tr><tr><td>Landing: stem centre from the front edge</td><td>1-1/2 ± 1/16</td><td><span class="blank"></span></td></tr><tr><td>Stem centre from the frame centreline, all six</td><td>22-1/2 ± 1/16</td><td><span class="blank"></span></td></tr><tr><td>Plumb when welded</td><td>within 1/32 over 7</td><td><span class="blank"></span></td></tr></tbody></table></div><p class="note">Placement by tread: tread 1, both ends, centred; tread 4, both ends, centred; landing, both ends, in line with the nose. Tread frames 2, 3, 5 and 6 get no stems.</p></div></article><article class="sheet" id="sU-W1"><header class="tb"><div class="num">U-W1</div><div class="ttl"><h2>W1 Ash planks</h2><p>Upper stairs</p></div></header><div class="body"><p class="qty"><b>Quantity:</b> 14, 2 per tread</p><h3>Material</h3><div class="scroll"><table class="grid"><thead><tr><th>Stock</th><th>Grade</th><th>Cut</th><th>Total for this flight</th></tr></thead><tbody><tr><td>Ash, thermally modified</td><td>8/4 rough, surfaced four sides</td><td>48 × 5-1/2 × 1-3/4</td><td>14 pcs</td></tr></tbody></table></div><h3>Hardware</h3><div class="scroll"><table class="grid"><thead><tr><th>Mark</th><th>Qty</th><th>Item</th></tr></thead><tbody><tr><td>H3</td><td>8 per plank</td><td>#10 × 2-3/4 type 316 wood screws, up through the frame, 1-1/4 into the ash, 1/8 pilot</td></tr></tbody></table></div><h3>Fabrication detail</h3><figure class="big"><div class="scroll"><svg viewBox="0 0 752 120" width="752" height="120" role="img" aria-label="W1, front and back planks, plan" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="plcc" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" class="ccb"/><circle cx="3" cy="4" r="1" class="ccd"/><circle cx="10" cy="9" r="1.4" class="ccd"/><path d="M6 12 l3 -2 l1 3z" class="ccd"/></pattern>
+<pattern id="plwd" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="10" height="10" class="wdb"/><path d="M0 3 Q5 1 10 3 M0 8 Q5 6.5 10 8" class="wdl"/></pattern>
+<pattern id="plst" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="stb"/><line x1="0" y1="0" x2="0" y2="6" class="stl"/></pattern>
+<pattern id="plgr" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="8" class="grl"/></pattern>
+</defs><rect x="22.8" y="9.9" width="364.8" height="41.8" rx="0" fill="url(#plwd)" class=" ob"/>
+<rect x="22.8" y="63.1" width="364.8" height="41.8" rx="0" fill="url(#plwd)" class=" ob"/>
+<rect x="22.8" y="9.9" width="23.8" height="10.9" rx="0" class="hid"/>
+<rect x="22.8" y="93.5" width="23.8" height="11.4" rx="0" class="hid"/>
+<rect x="363.8" y="9.9" width="23.8" height="10.9" rx="0" class="hid"/>
+<rect x="363.8" y="93.5" width="23.8" height="11.4" rx="0" class="hid"/>
+<line x1="22.8" y1="6.9" x2="22.8" y2="-2.7" class="ext"/>
+<line x1="387.6" y1="6.9" x2="387.6" y2="-2.7" class="ext"/>
+<line x1="22.8" y1="2.3" x2="387.6" y2="2.3" class="dl"/>
+<line x1="19.6" y1="5.5" x2="26.0" y2="-0.9" class="tick"/>
+<line x1="384.4" y1="5.5" x2="390.8" y2="-0.9" class="tick"/>
+<text x="205.2" y="-4.7" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 205.2 -4.7)">48</text>
+<line x1="22.8" y1="23.8" x2="22.8" y2="26.6" class="ext"/>
+<line x1="46.5" y1="23.8" x2="46.5" y2="26.6" class="ext"/>
+<line x1="22.8" y1="21.6" x2="46.5" y2="21.6" class="dl"/>
+<line x1="19.6" y1="24.7" x2="26.0" y2="18.4" class="tick"/>
+<line x1="43.4" y1="24.7" x2="49.7" y2="18.4" class="tick"/>
+<text x="34.7" y="28.6" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(0.00 34.7 28.6)">3-1/8</text>
+<line x1="405.8" y1="20.8" x2="408.6" y2="20.8" class="ext"/>
+<line x1="405.8" y1="9.9" x2="408.6" y2="9.9" class="ext"/>
+<line x1="403.6" y1="20.8" x2="403.6" y2="9.9" class="dl"/>
+<line x1="406.7" y1="24.0" x2="400.4" y2="17.6" class="tick"/>
+<line x1="406.7" y1="13.1" x2="400.4" y2="6.7" class="tick"/>
+<text x="410.6" y="15.3" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 410.6 15.3)">1-7/16</text>
+<line x1="405.8" y1="104.9" x2="408.6" y2="104.9" class="ext"/>
+<line x1="405.8" y1="93.5" x2="408.6" y2="93.5" class="ext"/>
+<line x1="403.6" y1="104.9" x2="403.6" y2="93.5" class="dl"/>
+<line x1="406.7" y1="108.1" x2="400.4" y2="101.7" class="tick"/>
+<line x1="406.7" y1="96.7" x2="400.4" y2="90.3" class="tick"/>
+<text x="410.6" y="99.2" text-anchor="middle" dominant-baseline="central" class="dt" transform="rotate(-90.00 410.6 99.2)">1-1/2</text>
+<text x="205.2" y="30.8" text-anchor="middle" class="sm">front plank</text>
+<text x="205.2" y="84.0" text-anchor="middle" class="sm">back plank</text>
+<circle cx="34.2" cy="15.2" r="2.4" class="dot"/>
+<polyline points="34.2,15.2 433.2,13.7 445.2,13.7" class="ldr" fill="none"/>
+<circle cx="458.2" cy="13.7" r="12.5" class="bub"/>
+<text x="458.2" y="13.7" text-anchor="middle" dominant-baseline="central" class="bt">1</text>
+<text x="475.2" y="13.7" text-anchor="start" dominant-baseline="central" class="lt">Post treads only: notch at both ends</text>
+<circle cx="375.4" cy="98.8" r="2.4" class="dot"/>
+<polyline points="375.4,98.8 433.2,59.3 445.2,59.3" class="ldr" fill="none"/>
+<circle cx="458.2" cy="59.3" r="12.5" class="bub"/>
+<text x="458.2" y="59.3" text-anchor="middle" dominant-baseline="central" class="bt">2</text>
+<text x="475.2" y="59.3" text-anchor="start" dominant-baseline="central" class="lt">Notches face each other across the reveal</text>
+<circle cx="205.2" cy="47.9" r="2.4" class="dot"/>
+<polyline points="205.2,47.9 433.2,89.7 445.2,89.7" class="ldr" fill="none"/>
+<circle cx="458.2" cy="89.7" r="12.5" class="bub"/>
+<text x="458.2" y="89.7" text-anchor="middle" dominant-baseline="central" class="bt">3</text>
+<text x="475.2" y="89.7" text-anchor="start" dominant-baseline="central" class="lt">Pilot holes located from the frame holes at dry fit</text></svg></div><figcaption>Eight screws per plank: four along its front or back member, one at each end tube, one at each joist. Landing front plank: six, since its end holes sit under the posts. 1/8 eased edges, ends sealed, finish all faces before install. Landing tread: only the front plank is notched, at its front corners, 3-1/8 along the plank and 3-1/16 deep.</figcaption></figure><h3>Checks</h3><div class="scroll"><table class="grid checks"><thead><tr><th>Check</th><th>Target</th><th>Measured</th></tr></thead><tbody><tr><td>Length</td><td>48 ± 1/16</td><td><span class="blank"></span></td></tr><tr><td>Width</td><td>5-1/2 ± 1/32</td><td><span class="blank"></span></td></tr><tr><td>Thickness</td><td>1-3/4 ± 1/32</td><td><span class="blank"></span></td></tr></tbody></table></div></div></article></main></body></html>
